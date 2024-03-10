@@ -13,9 +13,9 @@ Amar Ghandi
 
 **Developers:**  
 Jerry  
-Tommy Phao   
-Jairus  
-Rebecca  
+Tommy Phao  
+Jairus Legion  
+Rebecca Smith  
 Rane  
-Armin Erika  
+Armin Erika
 Maddie Isaacs
