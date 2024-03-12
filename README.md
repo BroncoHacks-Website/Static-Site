@@ -7,6 +7,9 @@
 **Project Manager:**  
 Michael Wu
 
+**Technical Consultants:**  
+urmom
+
 **Tech Leads:**  
 Daniel Pasion  
 Chris J Lo  
