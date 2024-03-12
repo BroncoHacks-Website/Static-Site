@@ -5,3 +5,60 @@ h3 {
 .header-container {
   border: 2px solid black;
 }
+
+/*------------------
+*---  Profile  ---
+--------------------*/
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-container {
+  display: flex;
+  width: 25em;
+  background-color: rgba(0, 0, 0, .02);
+  font: 1.2rem "Fira Sans", sans-serif;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+  border-radius: 0.8rem;
+  margin: 0.8rem;
+  overflow: hidden;
+  border: 0.1rem solid rgba(0, 0, 0, .1);
+}
+
+.text-box {
+  width: 80%;
+  padding: 1em;
+  line-height: 1em;
+  text-align: center;
+}
+
+.text-box a {
+  display:inline-block;
+  width: 70%;
+  margin-top: 1em;
+  background-color: rgba(0, 0, 0, .1);
+  text-decoration:none;
+  padding: 0.6em;
+  border-radius: 2em;
+  text-align: center;
+  background-color: rgba(63, 142, 199, 0.1);
+  color:rgba(63, 142, 199, 1);
+  border: 0.1rem solid rgba(63, 142, 199, 0.4);
+}
+
+.text-box a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color:white;
+  border: 0.1rem solid  rgba(0, 0, 0, 0.1);
+}
+
+.img-container{
+  width: 90%;
+  background-image: url("/src/assets/imgs/perplexed.png");
+  height: 250px; 
+  background-position: center; 
+  background-size: cover; 
+}
+
