@@ -8,7 +8,8 @@
 Michael Wu
 
 **Technical Consultants:**  
-urmom
+Amar Gandhi  
+Tony Tong
 
 **Tech Leads:**  
 Daniel Pasion  
