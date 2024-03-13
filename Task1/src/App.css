@@ -22,14 +22,15 @@ h3 {
 
 .profilegrid {
   display: flex;
-  position: absolute;
-  margin-top: 10px;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  grid-template-columns: repeat(4, 1fr);
+  justify-content: center; 
+  flex-wrap: wrap; 
+  margin: 10px auto;
+  max-width: 1200px; 
+  padding: 0 10px; 
   border-radius: 15px;
+  grid-template-columns: repeat(4, 1fr);
 } 
+
 
 .profile {
   margin-right: 25px;
