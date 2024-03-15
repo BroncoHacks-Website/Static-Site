@@ -3,5 +3,24 @@ h3 {
 }
 
 .header-container {
-  border: 2px solid black;
+  border: 2px solid white;
+}
+
+body {
+  background-color: #262835;
+}
+
+.text, .text a {
+  text-align: center;
+  color: white;
+}
+
+.text a:visited {
+  color: white;
+}
+
+.image {
+  border-radius: 50px;
+  max-width: 25%;
+  max-height: 25%;
 }
