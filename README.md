@@ -14,7 +14,7 @@ Justin Nguyen
 Amar Ghandi
 
 **Developers:**  
-Jerry  
+Jerry Solis
 Tommy Phao  
 Jairus Legion  
 Rebecca Smith  
