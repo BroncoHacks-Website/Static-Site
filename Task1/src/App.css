@@ -2,27 +2,64 @@ h3 {
   text-align: center;
 }
 
+a {
+  color:gray;  
+  text-decoration:none;
+  font-weight: bold;
+}
+
 .header-container {
   border: 2px solid black;
 }
 
 /*------------------
+*---  Navigation  ---
+--------------------*/
+.nav-main-container {
+  display: flex;
+  justify-content: center;
+  font: 1.2rem "Fira Sans", sans-serif;
+  background-color: rgba(0, 0, 0, .02);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+  border: 0.1rem solid rgba(0, 0, 0, .1);
+}
+
+.nav-main-container ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-main-container ul li a {
+  padding: 0.6em;
+  border-radius: 0.6em;
+  border: 0.1rem solid  rgba(0, 0, 0, 0);
+}
+
+
+.nav-main-container ul li a:hover {
+  color:rgb(63, 142, 199, 1);
+  background-color:rgb(63, 142, 199, 0.1);
+  border: 0.1rem solid  rgb(63, 142, 199, 0.1);
+}
+
+.nav-main-container ul li a:active {
+  color:rgb(63, 142, 199, 1);
+  background-color:rgb(63, 142, 199, 1);
+  border: 0.1rem solid  rgb(63, 142, 199, 1);
+}
+
+/*------------------
 *---  Profile  ---
 --------------------*/
-
 .main-container {
   display: flex;
   justify-content: center;
-}
-
-.profile-container {
-  display: flex;
   width: 25em;
   background-color: rgba(0, 0, 0, .02);
   font: 1.2rem "Fira Sans", sans-serif;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
   border-radius: 0.8rem;
-  margin: 0.8rem;
+  margin-top: 0.5em;
   overflow: hidden;
   border: 0.1rem solid rgba(0, 0, 0, .1);
 }
@@ -37,21 +74,24 @@ h3 {
 .text-box a {
   display:inline-block;
   width: 70%;
-  margin-top: 1em;
-  background-color: rgba(0, 0, 0, .1);
-  text-decoration:none;
+
   padding: 0.6em;
-  border-radius: 2em;
+  border-radius: 1em;
   text-align: center;
-  background-color: rgba(63, 142, 199, 0.1);
-  color:rgba(63, 142, 199, 1);
-  border: 0.1rem solid rgba(63, 142, 199, 0.4);
+  color:gray;
+  border: 0.1rem solid  gray;
 }
 
 .text-box a:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-  color:white;
-  border: 0.1rem solid  rgba(0, 0, 0, 0.1);
+  color:rgb(63, 142, 199, 1);
+  background-color:rgb(63, 142, 199, 0.1);
+  border: 0.1rem solid  rgb(63, 142, 199, 1);
+}
+
+.text-box a:active {
+  color:rgb(63, 142, 199, 1);
+  background-color:rgb(63, 142, 199, 1);
+  border: 0.1rem solid  rgb(63, 142, 199, 1);
 }
 
 .img-container{
