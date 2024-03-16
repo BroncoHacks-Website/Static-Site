@@ -3,6 +3,7 @@ function Profile() {
         <div>
             <div className="container">
             <h2>Meet the Team!</h2>
+                {/* grid system setup for 4 people per row, changable at the  grid-template-columns property*/}
                 <div className="profilegrid">
                     {/* per profile, add a within grid */}
                     <div className="profile">

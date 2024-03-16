@@ -1,7 +1,7 @@
 function Navbar() {
     return (
         <div>
-            <div className="navigationbar">
+            <nav className="navigationbar">
                 <div className="logo">
                     <img src="https://avatars.githubusercontent.com/u/162087021?s=200&v=4" alt="Logo" />
                 </div>
@@ -9,7 +9,7 @@ function Navbar() {
                     <a href="/home">Home</a>
                     <a href="/about">About</a>
                 </div>
-            </div>
+            </nav>
         </div>
     );
 }
