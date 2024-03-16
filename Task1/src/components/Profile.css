@@ -1,0 +1,14 @@
+img {
+    transform: scale(0.75);
+    
+}
+.person {
+    padding: 20px;
+    color: green;
+    font-family: Arial;
+    border: 2px solid;
+    width: 200px;
+    border-color: black;
+
+}
+
