@@ -3,16 +3,15 @@ function Navbar() {
         <div>
             <div className="navigationbar">
                 <div className="logo">
-                    insert logo
+                    <img src="https://avatars.githubusercontent.com/u/162087021?s=200&v=4" alt="Logo" />
                 </div>
                 <div className="buttons">
                     <a href="/home">Home</a>
-                    <a href="/about">about</a>
+                    <a href="/about">About</a>
                 </div>
             </div>
         </div>
-    )
+    );
 }
-
 
 export default Navbar
