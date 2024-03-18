@@ -1,4 +1,5 @@
 // Profile.jsx
+
 import React from "react";
 import "./Profile.css";
 
@@ -13,7 +14,7 @@ const Profile = () => {
   return (
     <div className="profile">
       <div className="profile-picture">
-        <img src={profilePic} alt="Profile" />
+        <img src={profilePic} alt="profile" />
       </div>
       <div className = "profile-info">
         <h1>Mini Profile</h1>
