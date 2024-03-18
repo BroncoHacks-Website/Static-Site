@@ -1,0 +1,23 @@
+/* Profile.css */
+
+.profile {
+  display: flex;
+  align-items: center;  
+  width: 30%;
+  padding: 20px;
+  margin-top: 10px;
+  border: 2px solid #6465a5;
+  border-radius: 30px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-picture {
+  flex: 0 0 40%;
+  margin-right: 30px;
+}
+
+.profile-picture img {
+  width: 100%;
+  border-radius: 50%;
+}
+
