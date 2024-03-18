@@ -7,6 +7,7 @@ function App() {
   return (
     <div>
       <div class="header-container">
+        {<navbar></navbar>}
         <h3> Place your Mini Profile Component below!</h3>
       </div>
       {<Profile></Profile>}
