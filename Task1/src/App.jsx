@@ -9,7 +9,7 @@ function App() {
       <div class="header-container">
         <h3> Place your Mini Profile Component below!</h3>
       </div>
-      {/*   Insert your Profile Component here   */}
+      {<Profile></Profile>}
     </div>
   )
 }

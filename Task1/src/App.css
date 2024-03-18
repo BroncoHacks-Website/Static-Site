@@ -5,3 +5,28 @@ h3 {
 .header-container {
   border: 2px solid black;
 }
+
+.profile .pfp img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+}
+
+.profile p.name{
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+
+.profile p.major{
+  text-align: center;
+  color: black;
+  font-size: 12px;
+}
+
+.profile p.year{
+  text-align: center;
+  color: black;
+  font-size: 12px;
+}
