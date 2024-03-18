@@ -29,4 +29,31 @@ h3 {
   text-align: center;
   color: black;
   font-size: 12px;
+
+.navbar {
+  list-style-type: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  /*padding: 10px;*/
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #e1c4ff;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #04AA6D;
+  color: white;
 }
