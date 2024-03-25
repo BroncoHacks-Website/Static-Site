@@ -20,7 +20,7 @@ function App() {
           <Route path="MeetTheTeam" element={<MeetTheTeam/>}/>
           <Route path="Sponsors" element={<Sponsors/>}/>
       </Routes>
-      <div classame="footer">
+      <div className="footer">
         <Footer/>
       </div>
     </Router>
