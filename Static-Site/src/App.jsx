@@ -5,7 +5,8 @@ import NavBar from './Components/NavBar'
 import FAQ from './Pages/FAQ'
 import MeetTheTeam from './Pages/MeetTheTeam'
 import Sponsors from './Pages/Sponsors'
-import Profile from "./Components/Profile.jsx";
+import Profile from './Components/Profile.jsx';
+import Footer from './Components/Footer.jsx';
 import "./styles/Profile.css"; /* temporary just so it visually looks fine */
 
 function App() {
@@ -19,10 +20,10 @@ function App() {
           <Route path="MeetTheTeam" element={<MeetTheTeam/>}/>
           <Route path="Sponsors" element={<Sponsors/>}/>
       </Routes>
+      <div classame="footer">
+        <Footer/>
+      </div>
     </Router>
   )
 }
 export default App;
-
-
-
