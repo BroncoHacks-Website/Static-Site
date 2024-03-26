@@ -1,4 +1,4 @@
-function App() {
+function MeetTheTeam() {
 
     return (
       <>
@@ -7,4 +7,4 @@ function App() {
     )
   }
   
-  export default App
+  export default MeetTheTeam
