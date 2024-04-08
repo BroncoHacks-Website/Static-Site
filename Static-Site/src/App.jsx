@@ -6,7 +6,7 @@ import FAQ from './Pages/FAQ'
 import MeetTheTeam from './Pages/MeetTheTeam'
 import Sponsors from './Pages/Sponsors'
 import Profile from "./Components/Profile.jsx";
-import "./styles/Profile.css"; /* temporary just so it visually looks fine */
+import '/src/styles/Profile.css'; /* temporary just so it visually looks fine */
 
 function App() {
   return (
