@@ -1,24 +1,33 @@
 /* MeetTheTeam.css */
 
+body { /* Testing background from mockup */
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #e6dcc6;
+    background-image: url("/src/Assets/racetrack-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}   
+
 .meet-the-team {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 5vh;
+    margin: 5vh;
 }
 
 .team-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: auto;
-    max-width: 1000px;
+    max-width: 1400px;
 }
 
 .profile-wrapper {
     margin: 10px;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .profile-bubble {
@@ -26,6 +35,7 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .profile-bubble img {
@@ -35,18 +45,58 @@
 
 .profile-bubble .linkedinpicture {
     position: absolute;
-    bottom: -10px; 
+    bottom: 0px; 
     left: 70%; 
     width: 45px; 
-    height: 45px; 
+    height: 45px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
 }
 
 .profile-bubble .profilebody {
-    margin-top: 5px;
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
     align-items: center;
     text-align: center;
 }
 
-.profile-bubble .profilebody name {
+.profile-bubble .profilebody .name {
     font-size: 1.25rem;
+}
+
+.profile-bubble .profilebody .role {
+    font-size: .75rem;
+}
+
+.role-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.role-buttons button {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 2px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transition: background-color 0.2s;
+}
+
+.role-buttons button:hover {
+    background-color: #67bea4;
+}
+
+.role-buttons button:active {
+    background-color: #67bea4;
+    box-shadow: 0 5x #666;
+    transform: translateY(4px);
 }
