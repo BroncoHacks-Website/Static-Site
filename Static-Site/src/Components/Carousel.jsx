@@ -34,14 +34,14 @@ function ImageCarousel({ folderPath }) {
   return (
     <div className="carousel-container">
       <div className="carousel">
-        {currentImages.map((imageName, index) => (
+        {currentImages.length > 0 && currentImages.map((imageName, index) => (
           <div key={index}>
             <img src={`${folderPath}/${imageName}`} alt={`Slide ${index + 1}`} className="carousel-image" />
           </div>
         ))}
       </div>
     </div>
-  );
+  );  
 }
 
 ImageCarousel.propTypes = {
