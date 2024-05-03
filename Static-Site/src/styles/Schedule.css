@@ -1,0 +1,119 @@
+/* Schedule.css */
+
+.schedule-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-image: url('Public/sky-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title-container {
+    background-image: url('/cloud1.png');
+    background-size: cover;
+    width: 265px;
+    height: 200px;
+}
+
+.title-container h1 {
+    position: relative;
+    margin-top: 18%;
+    font-size: 2rem; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.schedule-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 1%;
+    width: 50%;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.basic-info {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.basic-info img {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    margin: 60px; /* Spacing between image and text */
+}
+
+.basic-info .title {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.basic-info .title .location-details {
+    display: flex box;
+    flex-direction: column;
+    margin-top: 10px; /* Adjust spacing between text and image */
+}
+
+.basic-info .title .location-details p {
+    margin: 0;
+    text-align: left;
+}
+
+.day-section {
+    margin: 20px;
+    width: 95%;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.day-header {
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #97D8C4;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.schedule {
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.schedule p {
+    margin: 5px 0;
+}
+
+.note {
+    font-size: .8em; 
+    text-align: center; 
+    margin-top: 10px;
+}
+
+/* Style for when the collapsible section is open */
+.day-section.open {
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Rotate arrow icon when section is open */
+.day-header.open::after {
+    content: '\25BC'; /* down arrow */
+    float: right;
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(180deg);
+}

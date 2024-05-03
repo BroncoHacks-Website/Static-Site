@@ -8,6 +8,7 @@ function NavBar() {
         <Link to={"./FAQ"}>FAQ </Link>
         <Link to={"./MeetTheTeam"}>Meet The Team </Link>
         <Link to={"./Sponsors"}>Sponsors </Link>
+        <Link to={"./Schedule"}>Schedule </Link>
       </nav>
     )
   }
