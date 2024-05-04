@@ -1,0 +1,69 @@
+/* NavBar.css */
+
+.flex {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%;
+    
+  }
+  
+  .items-center {
+    align-items: center; 
+  }
+  
+  .space-x-4 > * + * {
+    margin-left: 1rem; 
+  }
+  
+  nav {
+    background-color: #ffffff; 
+    padding: 1rem; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 0 auto; 
+    height: 30px; 
+    width: 100vw;
+  }
+  
+  .Logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .BroncoText {
+    margin-right: auto;
+    font-weight: bold;    
+    font-size: 1.5rem;
+    font-family: 'Verdana', sans-serif; 
+  }
+  
+  .nav-links a {
+    margin-right: 1rem; 
+    font-weight: bold;    
+    font-size: 1.5rem;
+    color: #72DBBB; 
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease; 
+    font-family: 'Verdana', sans-serif; 
+  }
+  
+  .nav-links a:hover {
+    color: #00843D; 
+  }
+  
+  .apply {
+    background-color: #035BA5; 
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem; 
+    padding: 5px 15px; 
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Verdana', sans-serif; 
+  }
+  
+  .apply:hover {
+    background-color: #01426A; 
+  }

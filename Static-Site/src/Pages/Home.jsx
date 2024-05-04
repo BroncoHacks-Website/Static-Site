@@ -13,7 +13,7 @@ function Home() {
             <DescriptionBox/>
             <div className="slides">
               <div className="containerStyles">
-                <Slideshow slides={slidesData}/>
+                <Slideshow slides={slidesData} parentWidth={500}/>
               </div>
             </div>
           </div>
