@@ -133,7 +133,7 @@ export const profileData = [
     name: "Rebecca Smith",
     role: ["Website Developer"],
     picture: "/src/Assets/Profile/team/user.png",  
-    linkedin: "https://www.linkedin.com/in/teammember",
+    linkedin: "https://www.linkedin.com/in/rebecca-l-smith-3075604/",
   },
   {
     id: 19,
