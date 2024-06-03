@@ -4,14 +4,14 @@ function Footer() {
     return (
       <footer>
         <hr></hr>
-        <div class="container">
-          <div class="footer-content">
+        <div className="container">
+          <div className="footer-content">
             <img className="broncohackslogo" src="../src/Assets/Profile/icon/BroncoHacks_Logo.png"/>
           </div>
-          <div class="footer-content">
+          <div className="footer-content">
             <p>&copy;BroncoHacks. All rights reserved.</p>
           </div>
-          <div class="footer-content">
+          <div className="footer-content">
             <h3>Connect with Us</h3>
             <a href="mailto: cppbroncohacks@gmail.com">cppbroncohacks@gmail.com</a>
             <ul>

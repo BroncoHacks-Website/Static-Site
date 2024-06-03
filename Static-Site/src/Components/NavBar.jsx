@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import "../styles/NavBar.css"; 
 
@@ -14,7 +13,8 @@ function NavBar() {
         <span className="BroncoText">BRONCO HACKS</span>
         <div className="nav-links"> 
             <Link to={"./"}>Home </Link>
-            <Link to={"../MeetTheTeam"}>About Us</Link>
+            <Link to={"../MeetTheTeam"}>Meet The Team</Link>
+            <Link to={"../AboutUs"}>About Us</Link>
             <Link to={"../Sponsors"}>Sponsors</Link>
             <Link to={"../FAQ"}>FAQ</Link>
             <Link to={"../Login"}>Login</Link>

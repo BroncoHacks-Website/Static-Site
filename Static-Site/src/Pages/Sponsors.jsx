@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../styles/Sponsors.css';
 import checkeredFlag from "../Assets/Design/checkeredflag.png";
 import sponsorsData from "../Assets/Sponsors/sponsors.json";
@@ -139,6 +139,6 @@ function Sponsors() {
       </div>
     </>
   );
-};
+}
   
 export default Sponsors;
