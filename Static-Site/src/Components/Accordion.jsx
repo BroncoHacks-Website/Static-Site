@@ -3,29 +3,31 @@ import React, { useState } from 'react';
 import PropTypes from "prop-types";
 
 function Accordion(props, index) {
-    const [isOpen, setIsOpen] = useState(false);
     const accordionData = props.data;
-    
-    const toggleAccordion = () => {
-        setIsOpen(!isOpen);
-    };
+    const [Height, setHeight] = useState('0px');
+    const [Opacity, setOpacity] = useState('0');
+    const [Margin, setMargin] = useState('0 30px');
+
+    const handleClickMenu = () => {
+        ((Height == '0px') ? setHeight('270px') : setHeight('0px'));
+        ((Opacity == '0') ? setOpacity('1') : setOpacity('0'));
+        ((Margin == '0 30px') ? setMargin('20px 30px') : setMargin('0 30px'));
+    }
 
     return (
         <>
-            <div className={isOpen ? "day-section active" : "day-section"}>
+            <div className="day-section">
                 <h3>
-                    <button className="day-header" onClick={toggleAccordion} aria-expanded={isOpen ? true : false}>
+                    <button className="day-header" onClick={handleClickMenu}>
                         {accordionData.title}
                     </button>
                 </h3>
-                {isOpen && (
-                    <div className={isOpen ? "schedule active" : "schedule"} aria-hidden={isOpen ? true : false}>
-                        {accordionData.content.map((item, index) => (
-                            <p key={index}>{item}</p>
-                        ))}
-                        <p className="note">Note: Schedule is subject to change.</p>
-                    </div>
-                )}
+                <div className="schedule" style={{ height: Height, margin: Margin, opacity: Opacity, transition: "all 0.5s" }} >
+                    {accordionData.content.map((item, index) => (
+                        <p key={index}>{item}</p>
+                    ))}
+                    <p className="note">Note: Schedule is subject to change.</p>
+                </div>
             </div>
         </>
     )

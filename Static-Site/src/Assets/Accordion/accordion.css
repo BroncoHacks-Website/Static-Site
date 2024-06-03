@@ -20,7 +20,7 @@
     position: relative;
     margin: 2em;
     width: 90%;
-    max-width: 750px;
+    max-width: 900px;
     border-radius: 20px;
     overflow: hidden;
     padding-bottom: 10px;
@@ -68,7 +68,6 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease-in-out;
 }
 
 .day-header {
@@ -86,41 +85,18 @@
 
 /*  Schedule  */
 .schedule {
-    display: none;
-    width: 100%;
-    max-height: 0;
     margin: 20px 30px;
     background-color: #ffffff;
-    transition: max-height 0.5s ease-in;
+    overflow: hidden;
 }
 
 .schedule p {
-    padding: 0.2em;
     margin: 5px 0;
     font-weight: bold;
 }
 
-/* Class for On click */
-.active {
-    display: inline-block;
-    height:fit-content;
-}
-
 .note {
+    padding-top: 10px;
     font-size: .8em; 
     text-align: center;
-}
-
-/* Style for when the collapsible section is open */
-.day-section.open {
-    height: auto;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-/* Rotate arrow icon when section is open */
-.day-header.open::after {
-    content: '\25BC'; /* down arrow */
-    float: right;
-    transition: transform 0.3s ease-in-out;
-    transform: rotate(180deg);
 }
