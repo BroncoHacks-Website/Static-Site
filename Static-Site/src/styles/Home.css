@@ -17,9 +17,28 @@
 }
 
 .containerStyles {
-    width: 500px;
-    height: 280px;
+    width: 31.25rem;
+    height: 17.5rem;
     margin: 0 auto;
+}
+
+.slide-wrapper {
+    outline: 0.313rem solid green;
+    border-radius: 0.625rem;
+    outline-width: 0.625rem;
+}
+
+.home-map {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-wrapper {
+    outline: 0.313rem solid green;
+    border-radius: 0.625rem;
+    outline-width: 0.625rem;
 }
 
 /* ---- Media Queries ---- */
