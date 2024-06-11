@@ -14,7 +14,12 @@
 }
 
 .db-title h2 {
-    color: green;
+    color: #72dbbb;
+    font-size: 1.3em;
+}
+
+.db-content h3 {
+    text-align: left;
 }
 
 .db-title-wrapper {
@@ -35,7 +40,7 @@
 }
 .db-mascot {
     position: absolute;
-    height: 8em;
+    height: 9em;
     bottom: 0;
     left: 0;
 }

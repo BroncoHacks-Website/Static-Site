@@ -7,7 +7,7 @@
     align-items: center;
     min-height: 100vh;
     background-image: url('/src/Assets/Design/racetrack-background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto 100%;
     background-position: center;
 }

@@ -15,7 +15,9 @@ function DescriptionBox() {
           <div className="db-content-wrapper">
             <img className="db-mascot" src="../src/Assets/DescriptionBox/imgs/cppBroncoMascot.png" alt="Bronco Mascot"/>
             <span className="db-filler"></span>
-            <h4>A 24-Hour hackathon where you can showcase your skills in front of industry professionals!</h4>
+            <span className="db-content">
+              <h3>A 24-Hour hackathon where you can showcase your skills in front of industry professionals!</h3>
+            </span>
           </div>
         </div>
       </>
