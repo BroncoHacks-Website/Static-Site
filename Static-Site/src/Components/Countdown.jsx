@@ -43,26 +43,37 @@ function Countdown(props) {
     return () => getTimeUntil(deadline);
   }, [deadline]);
 
+  const splitDigits = (num) => {
+    return String(num).padStart(2, '0').split('');
+  };
+
   return (
-    <>
-      <div className="cd-container" role="timer" tabIndex="0">
-        <h2 className="cd-title">BroncoHacks is starting in</h2>
-        <div className="cd-time-wrapper">
-          <h1 className="cd-days">{createLeadingZero(days)}</h1><span className="cd-semicolon">:</span>
-          <h1>{createLeadingZero(hours)}</h1><span className="cd-semicolon">:</span>
-          <h1>{createLeadingZero(minutes)}</h1><span className="cd-semicolon">:</span>
-          <h1 className="cd-seconds">{createLeadingZero(seconds)}</h1>
-        </div>
-        <div className="cd-txt-wrapper">
-
-          <span className="cd-txt-days"><h3>Days</h3></span>
-          <span className="cd-txt-hours"><h3>Hours</h3></span>
-          <span className="cd-txt-minutes"><h3>Minutes</h3></span>
-          <span className="cd-txt-seconds"><h3>Seconds</h3></span>
-
-        </div>
+    <div className="cd-container" role="timer" tabIndex="0">
+      <h2 className="cd-title">BroncoHacks is starting in</h2>
+      <div className="cd-time-wrapper">
+        {splitDigits(days).map((dayDigit, index) => (
+          <h1 key={`day-${index}`} className={`day-${index}`}>{dayDigit}</h1>
+        ))}
+        <span className="cd-semicolon">:</span>
+        {splitDigits(hours).map((hrsDigit, index) => (
+          <h1 key={`hour-${index}`} className={`hour-${index}`}>{hrsDigit}</h1>
+        ))}
+        <span className="cd-semicolon">:</span>
+        {splitDigits(minutes).map((minDigit, index) => (
+          <h1 key={`minute-${index}`} className={`minute-${index}`}>{minDigit}</h1>
+        ))}
+        <span className="cd-semicolon">:</span>
+        {splitDigits(seconds).map((secondsDigit, index) => (
+          <h1 key={`second-${index}`} className={`second-${index}`}>{secondsDigit}</h1>
+        ))}
       </div>
-    </>
+      <div className="cd-txt-wrapper">
+        <h3 className="cd-txt-days">Days</h3>
+        <h3 className="cd-txt-hours">Hours</h3>
+        <h3 className="cd-txt-minutes">Minutes</h3>
+        <h3 className="cd-txt-seconds">Seconds</h3>
+      </div>
+    </div>
   );
 }
 

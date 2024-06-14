@@ -1,12 +1,17 @@
 .cd-container {
     position: relative;
     width: 464px;
+    align-items: center;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     margin: 0.2em auto;
     background-color:white;
     border-radius: 10px;
     box-shadow: 0 1px 3px gray;
     padding: 1em;
-    text-align: center;
+  
  }
 
  .cd-time-wrapper {
@@ -16,31 +21,44 @@
  }
 
 .cd-title {
-    padding: 0.5em 0 0.5em 0;
+    padding-bottom:0.5em;
 }
 
  .cd-time-wrapper h1 {
-    font-size: 3em;
-    padding: 0 0.2em 0 0.2em;
+    font-size: 2.8em;
+    padding: 0 0.1em 0 0.1em;
     background-color:#bcc9e7;
-    border-radius: 10px;
+    border-radius: 5px;
+    margin-right: 6px;
  }
 
  .cd-semicolon {
-   font-size: 3em;
+   font-size: 2.8em;
    font-weight: bold;
-   padding: 0 0.2em 0 0.2em;
+   padding: 0 0.1em 0 0.1em;
+   margin-right: 5px;
  }
 
  .cd-txt-wrapper {
-    display: flex;
-    column-gap: 1em;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5em;
+   display: flex;
+   align-items: center;
+   justify-content:space-evenly;
+   padding: 0.5em 0 0.5em 0;
  }
  .cd-txt-wrapper h3 {
     color: #72dbbb;
-    width: 100px;
+    width: 70px;
+    margin-right: 24px;
  }
 
+ .second-1 {
+   margin-right: 0;
+ }
+
+ h3.cd-txt-days {
+   width: 103px;
+ }
+
+ h3.cd-txt-seconds {
+   margin-right: 0;
+ }
