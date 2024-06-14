@@ -4,11 +4,10 @@
     justify-content: flex-start;
     align-items: center;
     height: 100vh;
-    background-image: url('/Background.png');
+    background-image: url('/src/Assets/Design/racetrack-background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding-top: 20px;
 }
 
 .title-container {
