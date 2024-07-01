@@ -1,9 +1,10 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const slideStyles = {
   width: "100%",
   height: "100%",
-  borderRadius: "10px",
+  borderRadius: "0.625rem",
   backgroundSize: "cover",
   backgroundPosition: "center",
 };
@@ -35,36 +36,58 @@ const sliderStyles = {
   height: "100%",
 };
 
-const dotsContainerStyles = {
+const slidesContainerStyles = {
   display: "flex",
-  justifyContent: "center",
+  height: "100%",
+  transition: "transform ease-out 0.3s",
 };
 
-const dotStyle = {
-  margin: "0 3px",
-  cursor: "pointer",
-  fontSize: "20px",
+const slidesContainerOverflowStyles = {
+  overflow: "hidden",
+  height: "100%",
 };
 
-const Slideshow = ({ slides }) => {
+const Slideshow = ({ slides, parentWidth }) => {
+  const timerRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  //prev slide
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
-  const goToNext = () => {
+
+  //next slide
+  const goToNext = useCallback(() => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
-  };
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
-  const slideStylesWidthBackground = {
+  }, [currentIndex, slides]);
+
+  const getSlideStylesWithBackground = (slideIndex) => ({
     ...slideStyles,
-    backgroundImage: `url(${slides[currentIndex].url})`,
-  };
+    backgroundImage: `url(${slides[slideIndex].url})`,
+    width: `${parentWidth}px`,
+  });
+
+  const getSlidesContainerStylesWithWidth = () => ({
+    ...slidesContainerStyles,
+    width: parentWidth * slides.length,
+    transform: `translateX(${-(currentIndex * parentWidth)}px)`,
+  });
+
+  //timer component
+  useEffect(() => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+    timerRef.current = setTimeout(() => {
+      goToNext();
+    }, 5000); //Changes the current photo after x amount of ms
+
+    return () => clearTimeout(timerRef.current);
+  }, [goToNext]);
 
   return (
     <div style={sliderStyles}>
@@ -76,16 +99,15 @@ const Slideshow = ({ slides }) => {
           ❱
         </div>
       </div>
-      <div style={slideStylesWidthBackground}></div>
-      <div style={dotsContainerStyles}>
-        {slides.map((slide, slideIndex) => (
-          <div
-            style={dotStyle}
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
-          >
-          </div>
-        ))}
+      <div style={slidesContainerOverflowStyles}>
+        <div style={getSlidesContainerStylesWithWidth()}>
+          {slides.map((_, slideIndex) => (
+            <div
+              key={slideIndex}
+              style={getSlideStylesWithBackground(slideIndex)}
+            ></div>
+          ))}
+        </div>
       </div>
     </div>
   );

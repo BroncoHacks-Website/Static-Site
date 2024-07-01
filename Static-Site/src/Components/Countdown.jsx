@@ -1,5 +1,5 @@
 import "../styles/Countdown.css";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 /*
@@ -64,7 +64,7 @@ function Countdown(props) {
       </div>
     </>
   );
-};
+}
 
 Countdown.propTypes = {
   deadline: PropTypes.string.isRequired,

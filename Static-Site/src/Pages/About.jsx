@@ -1,14 +1,15 @@
+/* eslint-disable react/no-unescaped-entities */
 import '/src/styles/About.css';
 function About() {
 
     return (
       <>
         <body>
-            <div class = "container">
+            <div className = "container">
                 <h1>About Us</h1>
-                <div class = "container-items">
+                <div className = "container-items">
                     <div>
-                    <div class = "container-clubs">
+                    <div className = "container-clubs">
                         <h2>In Association With</h2>
                         <ul>
                             <li><a href="https://www.instagram.com/cppcss/" target="_blank" rel="noopener noreferrer"><img src="https://ugc.production.linktr.ee/12da207a-6379-4d6a-b8ff-1b8fbbca1ad4_CFD8FBB7-FFEE-4DA9-A2FE-3C667A69CAE3.png?io=true&size=avatar-v3_0"/></a></li>
@@ -25,7 +26,7 @@ function About() {
                         </ul>
                     </div>
                     </div>
-                    <div class = "container-right">
+                    <div className = "container-right">
                         <h2>Cal Poly Pomona's Official Hackathon</h2>
                         <p>Created by students for students. This 24-hour hackathon event hosted on Cal Poly Pomona's own campus. Hackers will compete in teams of 2-4 in either mobile development, web development, or cybersecurity. We welcome students of all skill levels to compete! This event is completely free to enter and food will be provided as well. </p>
                         {/* additional paragraph, unsure what info to add */}

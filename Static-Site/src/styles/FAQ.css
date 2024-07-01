@@ -1,64 +1,153 @@
+/* FAQ.css */
+
+/* Base styles for FAQ items */
+.faq-item {
+    width: 100%;
+    max-width: 900px;
+    font-size: 1.2rem;
+    margin: 5px auto;
+    overflow: hidden; /* Ensure smooth transitions */
+    transition: max-height 1s , padding 1s ease; /* Smooth height transition */
+    max-height: 80px; /* Default height for collapsed item */
+}
+
+.faq-item.active {
+    max-height: 500px; /* Adjust this value as needed for expanded item */
+}
+
+/* Main container for the FAQ page */
 .faq-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
-    background-image: url('/Background.png');
+    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+    background-image: url('/src/Assets/Design/racetrack-background.png');
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
+    position: relative; /* Make position relative to maintain flow */
+    overflow-x: hidden; /* Hide horizontal overflow */
     padding-top: 20px;
 }
 
+/* Background container */
+.faq-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    background-image: url('/src/Assets/Design/racetrack-background.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Title styling */
 .title-container {
-    margin-top: 35px;
     background-image: url('/cloud1.png');
+    height: 165px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
     width: 100%;
-}
-
-.bubbled-rectangle {
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 900px;
-    height: 100px;
-    margin-top: 20px;
-    overflow: hidden;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.inner-rectangle {
-    background-color: #97D8C4;
-    border-radius: 20px;
-    width: 30%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
-
-.text-content {
-    width: 60%;
-    padding-left: 10px;
+    overflow: hidden; /* Prevents content overflow */
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .faq-title {
-    font-size: 2rem; 
+    font-size: 2.5rem;
     font-weight: bold;
-    color: #000000; 
-    text-align: center; 
-    margin-bottom: 25px; 
-    margin-top: 25px;
-    font-family: Verdana, sans-serif; 
+    color: #000000;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    font-family: Verdana, sans-serif;
+}
+
+/* Main content container */
+.faq-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px; /* Adjust the gap between items as needed */
+    width: 100%;
+    max-width: 1000px; /* Ensure content doesn't exceed this width */
+    padding: 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Include padding in the width */
+    margin-top: 120px; /* Adjust top margin to make room for the title and cloud1.png */
+}
+
+/* Styling for the question box */
+.question-rectangle {
+    background-color: #97D8C4;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: border-radius 0.3s ease;
+    position: relative;
+}
+
+.question-rectangle p {
+    margin: 0;
+    color: #50628C;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* Active state for question box */
+.faq-item.active .question-rectangle {
+    border-radius: 20px 20px 0 0;
+}
+
+/* Styling for the answer box */
+.answer-rectangle {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: max-height 3s ease, padding 3s ease; /* Smooth height and padding transition */
+    max-height: 0; /* Initially hidden */
+    overflow: hidden; /* Ensure smooth transitions */
+}
+
+/* Active state for answer box */
+.faq-item.active .answer-rectangle {
+    max-height: 500px; /* Adjust as needed for expanded content */
+    padding: 15px;
+    border-radius: 0 0 20px 20px;
+    
+}
+
+.answer-rectangle p {
+    color: black;
+    font-weight: bold;
+}
+
+/* Arrow styling for question box */
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #50628C;
+    transition: transform 0.5s ease;
+}
+
+.arrow.down {
+    transform: rotate(360deg); /* Arrow points down */
+}
+
+.arrow.right {
+    transform: rotate(270deg); /* Arrow points right */
 }
