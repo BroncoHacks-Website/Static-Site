@@ -17,7 +17,6 @@ function NavBar() {
             <Link to={"../AboutUs"}>About Us</Link>
             <Link to={"../Sponsors"}>Sponsors</Link>
             <Link to={"../FAQ"}>FAQ</Link>
-            <Link to={"../Login"}>Login</Link>
             
           
           <button className="apply">
