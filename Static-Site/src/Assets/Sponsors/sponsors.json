@@ -1,7 +1,7 @@
 [
   { 
-    "name": "React", 
-    "description": "A JavaScript library for building user interfaces.", 
+    "name": "React",
+    "description": "A JavaScript library for building user interfaces.",
     "email": "contact@reactjs.org", 
     "website": "https://reactjs.org"
   },
