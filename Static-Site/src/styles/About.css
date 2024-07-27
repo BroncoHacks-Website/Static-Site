@@ -56,19 +56,20 @@
 .clubs-container {
     background-color: #A2C0A3;
     border-radius: 40px;
+    width: 550px;
     text-align: center;
-    width: 500px;
     margin: 20px 0 20px 0;
-    padding: 0 20px 20px 20px;
+    padding: 10px 30px 40px 30px;
 }
 .clubs-container h2 {
-    margin: 20px 0 20px 0;
+    margin-top: 20px;
 }
 
 .clubs-container ul {
     display: flex;
     justify-content: space-evenly;
     padding-inline-start: 0;
+    margin-top: 20px;
 }
 
 .clubs-container ul li {
