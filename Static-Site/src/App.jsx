@@ -7,6 +7,7 @@ import MeetTheTeam from './Pages/MeetTheTeam'
 import Sponsors from './Pages/Sponsors'
 import AboutUs from './Pages/About.jsx'
 import Footer from './Components/Footer.jsx'
+import Error from './Pages/Error.jsx'
 import "./styles/Profile.css"; /* temporary just so it visually looks fine */
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/FAQ" element={<FAQ/>}/>
           <Route path="/MeetTheTeam" element={<MeetTheTeam/>}/>
           <Route path="/Sponsors" element={<Sponsors/>}/>
+          <Route path="/Error" element={<Error/>}/>
       </Routes>
       <div className="foot">
         <Footer/>
