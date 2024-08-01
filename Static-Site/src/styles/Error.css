@@ -1,0 +1,43 @@
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh; 
+    background-image: url('/src/Assets/Design/racetrack-background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative; 
+    overflow-x: hidden; 
+    padding-top: 20px;
+}
+
+.Etitle-container {
+    background-image: url('/cloud1.png');
+    height: 350px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    width: 100%;
+    overflow: hidden; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .error-title {
+    font-size: 6rem; 
+    color: black; 
+  }
+  .error-phrase{
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+  }
+  
