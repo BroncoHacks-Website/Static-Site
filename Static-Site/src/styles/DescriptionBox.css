@@ -14,7 +14,12 @@
 }
 
 .db-title h2 {
-    color: #61dab5;
+    color: #72dbbb;
+    font-size: 1.3em;
+}
+
+.db-content h3 {
+    text-align: left;
 }
 
 .db-title-wrapper {
