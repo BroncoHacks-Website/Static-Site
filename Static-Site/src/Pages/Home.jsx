@@ -2,7 +2,6 @@ import Slideshow from '/src/Components/Slideshow.jsx';
 import { slidesData } from "../Assets/Profile/slidesData";
 import DescriptionBox from '../Components/DescriptionBox';
 import Countdown from '../Components/Countdown';
-import Winners from '../Components/WinnerCard';
 import '/src/styles/Home.css'
 
 function Home() {
@@ -19,7 +18,6 @@ function Home() {
             </div>
           </div>
           <Countdown deadline="October, 31, 2024" />
-          <Winners/>
         </div>
       </>
     )
