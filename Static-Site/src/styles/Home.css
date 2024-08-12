@@ -1,0 +1,53 @@
+/* ---- Main Content ---- */
+.home-featured-container {
+    padding: 5em 0 5em 0;
+    background-image:url('../Static-Site/src/Assets/Home/imgs/background.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+.home-featured-row1 {
+    padding-bottom: 3em;
+}
+
+/* ---- Slideshow ---- */
+.slides {
+    position: left;
+}
+
+.containerStyles {
+    width: 31.25rem;
+    height: 17.5rem;
+    margin: 0 auto;
+}
+
+.slide-wrapper {
+    outline: 0.313rem solid #97D8C4;
+    border-radius: 0.625rem;
+    outline-width: 0.35rem;
+}
+
+.home-map {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-wrapper {
+    outline: 0.313rem solid #97D8C4;
+    border-radius: 0.625rem;
+    outline-width: 0.35rem;
+}
+
+/* ---- Media Queries ---- */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {    
+    .home-featured-row1 {
+        display: flex;
+        column-gap: 3em;
+        align-items: center;
+        justify-content: center;
+    }
+}

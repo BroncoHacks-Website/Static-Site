@@ -1,16 +1,18 @@
 /* MeetTheTeam.css */
 
-body { /* Testing background from mockup */
-    width: 100vw;
-    min-height: 100vh;
+.meet-the-team { 
+    display: flex;
+    justify-content: center; 
     background-color: #e6dcc6;
     background-image: url("/src/Assets/racetrack-background.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
+    width: 100vw;
+    height: 100vh;
 }   
 
-.meet-the-team {
+.team-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,23 +20,31 @@ body { /* Testing background from mockup */
     margin: 5vh;
 }
 
-.team-container {
+.team-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.the-team {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1400px;
+    max-width: 1600px;
 }
 
 .profile-wrapper {
-    margin: 10px;
-    margin-bottom: 70px;
+    margin: 25px;
+    margin-bottom: 60px;
 }
 
 .profile-bubble {
     position: relative;
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -43,17 +53,17 @@ body { /* Testing background from mockup */
     object-fit: cover;
 }
 
-.profile-bubble .linkedinpicture {
+.profile-bubble .linkedin-picture {
     position: absolute;
     bottom: 0px; 
     left: 70%; 
-    width: 45px; 
-    height: 45px;
+    width: 60px; 
+    height: 60px;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
 }
 
-.profile-bubble .profilebody {
+.profile-bubble .profile-body {
     width: 150px;
     height: 150px;
     margin-top: 10px;
@@ -61,12 +71,12 @@ body { /* Testing background from mockup */
     text-align: center;
 }
 
-.profile-bubble .profilebody .name {
+.profile-bubble .profile-body .name {
     font-size: 1.25rem;
 }
 
-.profile-bubble .profilebody .role {
-    font-size: .75rem;
+.profile-bubble .profile-body .role {
+    font-size: 1rem;
 }
 
 .role-buttons {
@@ -81,13 +91,13 @@ body { /* Testing background from mockup */
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.25rem;
     margin: 2px;
     cursor: pointer;
     display: inline-block;
     border-radius: 20px;
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
+    background-color: #72DBBB;
+    box-shadow: 0 10px #666;
     transition: background-color 0.2s;
 }
 
@@ -96,7 +106,13 @@ body { /* Testing background from mockup */
 }
 
 .role-buttons button:active {
-    background-color: #67bea4;
+    background-color: #3e8e41;
+    box-shadow: 0 5x #666;
+    transform: translateY(4px);
+}
+
+.role-buttons button:focus {
+    background-color: #3e8e41;
     box-shadow: 0 5x #666;
     transform: translateY(4px);
 }

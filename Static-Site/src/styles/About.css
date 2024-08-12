@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* --- Commented out background image for now bcuz we still deciding how it would look */
+    /* background-image: url('../src/Assets/Backgrounds/About-background.png'); */
+    /* background-color: lightblue;  */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    border-radius: 50px;
+    max-width: 90%;
+    padding: 50px 20px;
+    margin: 0 auto;
+}
+
+.container-items{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.container h1{
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.container-clubs{
+    background-color: #A2C0A3;
+    border-radius: 50px;
+    text-align: center;
+}
+.container-clubs ul li{
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container-items ul li img {
+    border-radius: 50%;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.container-right{
+    flex: 1;
+    margin-left: 20px;
+}
+.container-items h2{
+    text-align: center;
+}
+.container-items p{
+    text-align: left;
+}

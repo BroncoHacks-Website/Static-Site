@@ -1,53 +1,53 @@
-// MeetTheTeam.jsx
-
-import React, { useState } from 'react';
 import Profile from '/src/Components/Profile';
-import profileData from '/src/Assets/Profile/profileData.json';
+import profileData from '/src/Assets/Profile/profileData';
+import { useState } from 'react';
 import '/src/styles/MeetTheTeam.css';
 
 function MeetTheTeam() {
   const [selectedRole, setSelectedRole] = useState('All'); // Initially show all profiles
 
-  const handleRoleChange = (role) => {
+  const selectTeam = (role) => {
     setSelectedRole(role);
-  };
-
-  // Filter profiles based on the selected role sorted in alphabetical order by name
-  const filteredProfiles = profileData
-    .filter(person => {
-      if (selectedRole === 'All') {
-        return true; // Show all profiles when 'All' is selected
-      } else {
-        return person.role.includes(selectedRole); // Show profiles if selected role
-      }
-    })
-    .sort((a, b) => a.name.localeCompare(b.name)); // Sort profiles alphabetically by name
+  }
 
   return (
-    <div>
-      <div className="meet-the-team">
-        <h1>Meet the Team</h1>
-        <div className="role-buttons">
-          <button onClick={() => handleRoleChange('All')}>All</button>
-          <button onClick={() => handleRoleChange('Primary Organizer')}>Primary Organizer</button>
-          <button onClick={() => handleRoleChange('Website Developer')}>Website Developer</button>
-          <button onClick={() => handleRoleChange('Application Portal Developer')}>Portal Developer</button>
-          <button onClick={() => handleRoleChange('UI/UX')}>UI/UX</button>
-          <button onClick={() => handleRoleChange('Extra Help')}>Extra Help</button>
-          {/* Add more buttons for other roles as needed */}
-        </div>
-        <div className="team-container">
-          {/* Map through filteredProfiles to create bubbles for each team member */}
-          {filteredProfiles.map((person, index) => (
-            <div key={index} className="profile-wrapper">
-              <div className="profile-bubble">
-                <Profile person={person} />
+    <>
+      <div className='meet-the-team'>
+        <div className='team-container'>
+          <h1>Meet the Team</h1>
+
+          <div className="role-buttons">
+            <button onClick={() => selectTeam('All')}>All</button>
+            <button onClick={() => selectTeam('Primary Organizer')}>Primary Organizers</button>
+            <button onClick={() => selectTeam('Website Developer')}>Website Developers</button>
+            <button onClick={() => selectTeam('UI/UX')}>UI/UX</button>
+            <button onClick={() => selectTeam('Application Portal Developer')}>Application Portal Developers</button>
+            <button onClick={() => selectTeam('Extra Help')}>Extra Help</button>
+          </div>
+
+          <div className="the-team">
+            {/* Map through profileData to create bubbles for each team member */}
+            {profileData
+              .filter(person => 
+                selectedRole === 'All' || person.role.includes(selectedRole)
+              )
+              .map((person) => (
+                <div key={person.id} className="profile-wrapper">
+                  <div className="profile-bubble">
+                    <Profile 
+                      person={{
+                        ...person, 
+                        role: selectedRole === 'All' ? [] : [selectedRole] // Pass only the selected role
+                      }} 
+                    />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

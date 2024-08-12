@@ -1,17 +1,22 @@
-import React, { useEffect, useState } from "react";
+import "../styles/Countdown.css";
+import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
 /*
 Requires deadline to be passed on as a parameter
 Example:
 let deadline = "October, 31, 2024";
 <Countdown deadline={deadline} />
+or 
+<Countdown deadline="October, 31, 2024" />
 */
 
-function Countdown({deadline}) {
+function Countdown(props) {
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
+  const deadline = props.deadline;
 
   const createLeadingZero = (num) => {
     return num < 10 ? "0" + num : num;
@@ -38,24 +43,32 @@ function Countdown({deadline}) {
     return () => getTimeUntil(deadline);
   }, [deadline]);
 
-    return (
-      <>
-        <div className="countdown-container" role="timer" tabIndex="0">
-          <div className="countdown-time-wrapper">
-            <span className="countdown-days">{createLeadingZero(days)}:</span>
-            <span className="countdown-hours">{createLeadingZero(hours)}:</span>
-            <span className="countdown-minutes">{createLeadingZero(minutes)}:</span>
-            <span className="countdown-seconds">{createLeadingZero(seconds)}</span>
-          </div>
-          <div className="countdown-txt-wrapper">
-            <span className="countdown-txt-days">Days</span>
-            <span className="countdown-txt-hours">Hours</span>
-            <span className="countdown-txt-minutes">Minutes</span>
-            <span className="countdown-txt-seconds">Seconds</span>
-          </div>
+  return (
+    <>
+      <div className="cd-container" role="timer" tabIndex="0">
+        <h2 className="cd-title">BroncoHacks is starting in</h2>
+        <div className="cd-time-wrapper">
+          <h1 className="cd-days">{createLeadingZero(days)}</h1><span className="cd-semicolon">:</span>
+          <h1>{createLeadingZero(hours)}</h1><span className="cd-semicolon">:</span>
+          <h1>{createLeadingZero(minutes)}</h1><span className="cd-semicolon">:</span>
+          <h1 className="cd-seconds">{createLeadingZero(seconds)}</h1>
         </div>
-      </>
-    )
-  }
-  
-  export default Countdown
+        <div className="cd-txt-wrapper">
+
+          <span className="cd-txt-days"><h3>Days</h3></span>
+          <span className="cd-txt-hours"><h3>Hours</h3></span>
+          <span className="cd-txt-minutes"><h3>Minutes</h3></span>
+          <span className="cd-txt-seconds"><h3>Seconds</h3></span>
+
+        </div>
+      </div>
+    </>
+  );
+}
+
+Countdown.propTypes = {
+  deadline: PropTypes.string.isRequired,
+};
+
+export default Countdown;
+
