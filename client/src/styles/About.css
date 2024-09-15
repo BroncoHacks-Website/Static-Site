@@ -7,16 +7,22 @@ body{
     /* --- Commented out background image for now bcuz we still deciding how it would look */
     /* background-image: url('../src/Assets/Backgrounds/About-background.png'); */
     /* background-color: lightblue;  */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-position: center; */
 }
 
-.container{
+.about-page-container {
+    background-color: #BCC9E7;
+    padding: 2rem;
+}
+
+.about-container{
     border-radius: 50px;
     max-width: 90%;
     padding: 50px 20px;
     margin: 0 auto;
+    background-color: white;
 }
 
 .container-items{
