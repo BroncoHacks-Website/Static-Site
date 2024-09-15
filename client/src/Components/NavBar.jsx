@@ -3,12 +3,14 @@ import "../styles/NavBar.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import BroncoHacksLogo from "../Assets/Profile/icon/BroncoHacks_Logo.png";
+// import useIsAuthenticated from "react-auth-kit/hooks/useIsAuthenticated";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const toggleHamburger = () => {
     setOpen(!open);
   };
+  // const isAuthenticated = useIsAuthenticated();
 
   return (
     <div className="navbar">
@@ -24,8 +26,18 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/meettheteam">
-            <h1>Team</h1>
+          <Link to="/About">
+            <h1>About</h1>
+          </Link>
+        </li>
+        <li>
+          <Link to="/Team">
+            <h1>Meet The Team</h1>
+          </Link>
+        </li>
+        <li>
+          <Link to="/Sponsors">
+            <h1>Sponsors</h1>
           </Link>
         </li>
         <li>
@@ -33,11 +45,12 @@ const Navbar = () => {
             <h1>FAQ</h1>
           </Link>
         </li>
-        <Link className="apply-button" to="/signup">
-          <button>
-            <h1>APPLY</h1>
-          </button>
-        </Link>
+        {/* <Link
+          className="apply-button"
+          to={isAuthenticated ? "/profile" : "/login"}
+        >
+          <button>{isAuthenticated ? <h1>PROFILE</h1> : <h1>APPLY</h1>}</button>
+        </Link> */}
       </ul>
 
       <div className="hamburger">
@@ -66,12 +79,30 @@ const Navbar = () => {
             </Link>
             <Link
               className="navLinks"
-              to="/meettheteam"
+              to="/about"
               onClick={() => {
                 setOpen(!open);
               }}
             >
-              <li className="dropdown-item">Team</li>
+              <li className="dropdown-item">About</li>
+            </Link>
+            <Link
+              className="navLinks"
+              to="/team"
+              onClick={() => {
+                setOpen(!open);
+              }}
+            >
+              <li className="dropdown-item">Meet The Team</li>
+            </Link>
+            <Link
+              className="navLinks"
+              to="/sponsors"
+              onClick={() => {
+                setOpen(!open);
+              }}
+            >
+              <li className="dropdown-item">Sponsors</li>
             </Link>
             <Link
               className="navLinks"
@@ -82,15 +113,14 @@ const Navbar = () => {
             >
               <li className="dropdown-item">FAQ</li>
             </Link>
-            <Link
+            {/* <Link
               className="navLinks"
-              to="/signup"
-              onClick={() => {
-                setOpen(!open);
-              }}
+              to={isAuthenticated ? "/profile" : "/login"}
             >
-              <li className="dropdown-item">Apply</li>
-            </Link>
+              <li className="dropdown-item">
+                {isAuthenticated ? "Profile" : "Apply"}
+              </li>
+            </Link> */}
           </ul>
         </div>
       </div>

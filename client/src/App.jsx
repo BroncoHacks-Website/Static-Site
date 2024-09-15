@@ -16,9 +16,9 @@ function App() {
       <NavBar className="navbar" />
       <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/AboutUs" element={<AboutUs/>}/>
+          <Route path="/About" element={<AboutUs/>}/>
           <Route path="/FAQ" element={<FAQ/>}/>
-          <Route path="/MeetTheTeam" element={<MeetTheTeam/>}/>
+          <Route path="/Team" element={<MeetTheTeam/>}/>
           <Route path="/Sponsors" element={<Sponsors/>}/>
           <Route path="/Error" element={<Error/>}/>
       </Routes>
