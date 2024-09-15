@@ -1,5 +1,5 @@
-import "../styles/Profile.css"; /* temporary just so it visually looks fine */
 import PropTypes from "prop-types";
+import "../styles/Profile.css"; /* temporary just so it visually looks fine */
 
 function Profile(props) {
 const person = props.person;
@@ -7,22 +7,25 @@ const person = props.person;
   return (
     <div className="profile">
       <img
-        className="profilepicture"
+        className="profile-picture"
         src={person.picture}
-        alt={"Picture of" + person.name}
+        alt={"Picture of " + person.name}
       />
-      <div className="profilebody">
-        <name>{person.name}</name>
-        { <div className="roles">
-          {person.role.map((role, index) => (
-            <role key={index}>{role}</role>
+      <div className="profile-body">
+        <div className="name">
+          {person.name}
+        </div>
+        <div className="roles">
+          {person.role.map((role, index) => ( 
+            <div key={index} className="role">{role}</div>
           ))}
-        </div> }
+        </div>
       </div>
-      <a href={person.linkedin}>
+      <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
         <img
-          className="linkedinpicture"
-          src="../src/Assets/Profile/icon/linkedin-small.png"
+          className="linkedin-picture"
+          src="/src/Assets/Profile/icon/linkedin-small.png"
+          alt="LinkedIn"
         />
       </a>
     </div>

@@ -1,37 +1,45 @@
 /* MeetTheTeam.css */
-.container {
+
+.meet-the-team { 
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-}
-
-.meet-the-team {
-    display: flex;
-    flex-direction: row;  ;
-    align-items: center;
-    text-align: center;
-    margin-top: 5vh;
-    margin-right: 10%;
-    margin-left: 10%;
-}
-
-.profilegrid{
-    display: flex;
-    flex-direction: row;
-    width: auto;
-    flex-wrap: nowrap;
-}
+    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+    background-image: url('/src/Assets/Design/racetrack-background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative; /* Make position relative to maintain flow */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    padding-top: 20px;
+}   
 
 .team-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 5vh;
+}
+
+.team-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.the-team {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: auto;
-    max-width: 1000px;
+    max-width: 1600px;
 }
 
 .profile-wrapper {
-    margin: 10px;
+    margin: 25px;
     margin-bottom: 60px;
 }
 
@@ -39,7 +47,8 @@
     position: relative;
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .profile-bubble img {
@@ -47,30 +56,67 @@
     object-fit: cover;
 }
 
-.profile-bubble .linkedinpicture {
+.profile-bubble .linkedin-picture {
     position: absolute;
-    bottom: -10px; 
+    bottom: 0px; 
     left: 70%; 
-    width: 45px; 
-    height: 45px; 
+    width: 60px; 
+    height: 60px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
 }
 
-.profile-bubble .profilebody {
-    margin-top: 5px;
+.profile-bubble .profile-body {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
     align-items: center;
     text-align: center;
 }
 
-.profile-bubble .profilebody name {
+.profile-bubble .profile-body .name {
     font-size: 1.25rem;
 }
 
-@media (min-width: 600px) {
-    .profilegrid{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: auto;
-        flex-wrap: nowrap;  
-    }
-  }
+.profile-bubble .profile-body .role {
+    font-size: 1rem;
+}
+
+.role-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.role-buttons button {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25rem;
+    margin: 2px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #72DBBB;
+    box-shadow: 0 10px #666;
+    transition: background-color 0.2s;
+}
+
+.role-buttons button:hover {
+    background-color: #67bea4;
+}
+
+.role-buttons button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5x #666;
+    transform: translateY(4px);
+}
+
+.role-buttons button:focus {
+    background-color: #3e8e41;
+    box-shadow: 0 5x #666;
+    transform: translateY(4px);
+}

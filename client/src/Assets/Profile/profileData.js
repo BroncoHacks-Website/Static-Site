@@ -46,7 +46,7 @@ export const profileData = [
   },
   {
     id: 6,
-    name: "Brando Tseng",
+    name: "Brandon Tseng",
     role: ["Application Portal Developer"],
     picture: "/src/Assets/Profile/team/user.png",  
     linkedin: "https://www.linkedin.com/in/teammember",
