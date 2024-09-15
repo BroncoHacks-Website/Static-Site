@@ -2,14 +2,17 @@
 
 .meet-the-team { 
     display: flex;
-    justify-content: center; 
-    background-color: #e6dcc6;
-    background-image: url("/src/Assets/racetrack-background.png");
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+    background-image: url('/src/Assets/Design/racetrack-background.png');
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    width: 100vw;
-    height: 100vh;
+    background-attachment: fixed;
+    position: relative; /* Make position relative to maintain flow */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    padding-top: 20px;
 }   
 
 .team-container {

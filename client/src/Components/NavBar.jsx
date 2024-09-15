@@ -24,7 +24,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/team">
+          <Link to="/meettheteam">
             <h1>Team</h1>
           </Link>
         </li>
@@ -66,7 +66,7 @@ const Navbar = () => {
             </Link>
             <Link
               className="navLinks"
-              to="/team"
+              to="/meettheteam"
               onClick={() => {
                 setOpen(!open);
               }}
