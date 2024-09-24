@@ -18,21 +18,23 @@ function MeetTheTeam() {
             <h1>Meet the Team</h1>
 
             <div className="role-buttons">
-              <button onClick={() => selectTeam("All")}>All</button>
+              <button onClick={() => selectTeam("All")}>
+                All
+              </button>
               <button onClick={() => selectTeam("Primary Organizer")}>
                 Primary Organizers
+              </button>
+              <button onClick={() => selectTeam("Project Manager")}>
+                Project Manager
               </button>
               <button onClick={() => selectTeam("Website Developer")}>
                 Website Developers
               </button>
-              <button onClick={() => selectTeam("UI/UX")}>UI/UX</button>
-              <button
-                onClick={() => selectTeam("Application Portal Developer")}
-              >
-                Application Portal Developers
+              <button onClick={() => selectTeam("UI/UX")}>
+                UI/UX
               </button>
-              <button onClick={() => selectTeam("Extra Help")}>
-                Extra Help
+              <button onClick={() => selectTeam("BroncoHacks 2023-2024 Committee")}>
+                Broncohacks 2023-2024 Committee
               </button>
             </div>
 
