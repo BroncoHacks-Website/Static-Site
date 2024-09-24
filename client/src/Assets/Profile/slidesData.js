@@ -1,6 +1,6 @@
 export const slidesData = [
     {
-        url: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/11/Dimple-Waves-Goodbye-%E2%80%93-Mob-Psycho-100-III-Episode-6.jpg'
+        url: 'src/Assets/EventPhotos/Overview2.jpg'
     },
     {
         url: 'https://pbs.twimg.com/media/CrOK2VKVUAAJOdg.jpg:large'

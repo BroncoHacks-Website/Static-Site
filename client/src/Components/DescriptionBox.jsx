@@ -15,7 +15,7 @@ function DescriptionBox() {
           <div className="db-content-wrapper">
             <img className="db-mascot" src="../src/Assets/DescriptionBox/imgs/cppBroncoMascot.png" alt="Bronco Mascot"/>
             <span className="db-filler"></span>
-            <h4>A 24-Hour hackathon where you can showcase your skills in front of industry professionals!</h4>
+            <h4>An unnoficial hackathon organization for Cal Poly Pomona, responsible for events such as MiniHack 2023 and BroncoHacks 2024</h4>
           </div>
         </div>
       </>

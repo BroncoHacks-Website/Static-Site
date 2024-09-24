@@ -20,7 +20,6 @@ const Card = ({ place, title, description, team, members, imagePath }) => {
           {members.map((member, index) => (
             <li key={index} className="member">
               <span>{member}</span>
-              <a href="#" className="linkedin-icon">in</a>
             </li>
           ))}
         </ul>

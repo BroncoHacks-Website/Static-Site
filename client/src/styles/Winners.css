@@ -59,7 +59,7 @@
   }
   
   .first {
-    color: yellow; /* gold */
+    color: gold; /* gold */
   }
   
   .second {
@@ -79,6 +79,12 @@
     align-items: center;
     margin: 16px 0;
   }
+
+  .pic-placeholder img {
+    flex-shrink: 0;
+    min-width: auto;
+    min-height: 100%
+}
   
   .title {
     font-size: 20px;
