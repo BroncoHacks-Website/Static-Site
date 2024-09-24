@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import "/src/styles/About.css";
-import MeetTheTeam from "./MeetTheTeam";
+import Winners from "../Components/WinnerCard";
 
 function About() {
   return (
@@ -106,6 +106,7 @@ function About() {
               </p>
             </div>
           </div>
+          <Winners></Winners>
         </div>
       </div>
       {/* <MeetTheTeam /> */}
