@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import data from '../Assets/Profile/2024winners.js';
 import '../styles/Winners.css';
 
-const Card = ({ place, title, description, team, members }) => {
+const Card = ({ place, title, description, team, members, imagePath }) => {
   return (
     <div className="card">
       <div className="card-content">
@@ -11,7 +11,7 @@ const Card = ({ place, title, description, team, members }) => {
           {place === 1 ? '1st' : place === 2 ? '2nd' : '3rd'}
         </h2>
         <div className="pic-placeholder">
-          <span>Placeholder for pic</span>
+            <img src={imagePath} alt="Winner Photo"/>
         </div>
         <h3 className="title">{title}</h3>
         <p className="description">{description}</p>
@@ -35,6 +35,7 @@ Card.propTypes = {
   description: PropTypes.string.isRequired,
   team: PropTypes.string.isRequired,
   members: PropTypes.arrayOf(PropTypes.string).isRequired,
+  imagePath: PropTypes.string.isRequired,
 };
 
 const Winners = () => {

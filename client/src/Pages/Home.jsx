@@ -3,7 +3,7 @@ import { slidesData } from "../Assets/Profile/slidesData";
 import DescriptionBox from '../Components/DescriptionBox';
 import Countdown from '../Components/Countdown';
 import '/src/styles/Home.css'
-import Minimap from '../Components/MiniMap.jsx';
+import Winners from '../Components/WinnerCard.jsx';
 
 function Home() {
 
@@ -21,11 +21,7 @@ function Home() {
             </div>
           </div>
           <Countdown deadline="October, 31, 2024" />
-          <div className="home-map">
-            <div className="map-wrapper">
-              {<Minimap></Minimap>}
-            </div>
-          </div>
+          <Winners></Winners>
         </div>
       </>
     )

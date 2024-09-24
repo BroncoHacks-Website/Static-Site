@@ -1,7 +1,7 @@
 /* ---- Main Content ---- */
 .home-featured-container {
     padding: 5em 0 5em 0;
-    background-image:url('../Static-Site/src/Assets/Home/imgs/background.png');
+    background-image: url('/src/Assets/Design/racetrack-background.png');
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
