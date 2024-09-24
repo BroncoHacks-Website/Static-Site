@@ -3,7 +3,6 @@ import { slidesData } from "../Assets/Profile/slidesData";
 import DescriptionBox from '../Components/DescriptionBox';
 import Countdown from '../Components/Countdown';
 import '/src/styles/Home.css'
-import { useState } from 'react'
 import Minimap from '../Components/MiniMap.jsx';
 
 function Home() {
