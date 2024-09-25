@@ -45,6 +45,11 @@ const Navbar = () => {
             <h1>FAQ</h1>
           </Link>
         </li>
+        <li>
+          <Link to="/schedule">
+            <h1>Schedule</h1>
+          </Link>
+        </li>
         {/* <Link
           className="apply-button"
           to={isAuthenticated ? "/profile" : "/login"}
@@ -112,6 +117,15 @@ const Navbar = () => {
               }}
             >
               <li className="dropdown-item">FAQ</li>
+            </Link>
+            <Link
+              className="navLinks"
+              to="/schedule"
+              onClick={() => {
+                setOpen(!open);
+              }}
+            >
+              <li className="dropdown-item">Schedule</li>
             </Link>
             {/* <Link
               className="navLinks"
