@@ -4,6 +4,7 @@ import NavBar from './Components/NavBar'
 import Home from './Pages/Home.jsx'
 import FAQ from './Pages/FAQ'
 import MeetTheTeam from './Pages/MeetTheTeam'
+import Schedule from './Pages/Schedule.jsx'
 import Sponsors from './Pages/Sponsors'
 import AboutUs from './Pages/About.jsx'
 import Footer from './Components/Footer.jsx'
@@ -20,6 +21,7 @@ function App() {
           <Route path="/FAQ" element={<FAQ/>}/>
           <Route path="/Team" element={<MeetTheTeam/>}/>
           <Route path="/Sponsors" element={<Sponsors/>}/>
+          <Route path="/Schedule" element={<Schedule/>}/>
           <Route path="/Error" element={<Error/>}/>
       </Routes>
       <div className="foot">
