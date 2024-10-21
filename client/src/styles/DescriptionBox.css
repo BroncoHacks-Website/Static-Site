@@ -1,0 +1,50 @@
+.db-container {
+   position: relative;
+   width: 464px;
+   height: 250px;
+   background-color:white;
+   border-radius: 10px;
+   box-shadow: 0 1px 3px gray;
+   padding: 1em;
+   margin: 1em auto;
+}
+
+.db-title h1 {
+    font-size: 3.2em;
+}
+
+.db-title h2 {
+    color: #61dab5;
+}
+
+.db-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.db-content-wrapper {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    align-items: center;
+}
+.db-filler {
+    height: 7em;
+    width: 9em;
+}
+.db-mascot {
+    position: absolute;
+    height: 8em;
+    bottom: 0;
+    left: 0;
+}
+
+/* ---- Media Queries ---- */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    /* For Home Page*/    
+    .db-container {
+        margin: 0;
+    }
+}

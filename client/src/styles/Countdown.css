@@ -1,0 +1,46 @@
+.cd-container {
+    position: relative;
+    width: 464px;
+    margin: 0.2em auto;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px gray;
+    padding: 1em;
+    text-align: center;
+ }
+
+ .cd-time-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+.cd-title {
+    padding: 0.5em 0 0.5em 0;
+}
+
+ .cd-time-wrapper h1 {
+    font-size: 3em;
+    padding: 0 0.2em 0 0.2em;
+    background-color:lightblue;
+    border-radius: 10px;
+ }
+
+ .cd-semicolon {
+   font-size: 3em;
+   font-weight: bold;
+   padding: 0 0.2em 0 0.2em;
+ }
+
+ .cd-txt-wrapper {
+    display: flex;
+    column-gap: 1em;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+ }
+ .cd-txt-wrapper h3 {
+    color: green;
+    width: 100px;
+ }
+

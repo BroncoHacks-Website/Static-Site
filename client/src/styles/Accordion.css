@@ -1,0 +1,103 @@
+.title-container {
+    margin-top: 3em;
+    width: 225px;
+    min-height: 150px;
+    background-image: url('/cloud1.png');
+    background-size: cover;
+}
+
+.title-container h1 {
+    position: relative;
+    margin-top: 22%;
+    font-size: 2.1rem; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.schedule-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 2em;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.basic-info {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 20px 15px 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.basic-info img {
+    width: 125px; /* Adjust as needed */
+    height: auto;
+    margin: 10px; /* Spacing between image and text */
+}
+
+.basic-info .title {
+    font-display: flex;
+    font-size: 1em;
+    padding: 15px;
+}
+
+.basic-info .title .location-details {
+    display: flex box;
+    flex-direction: column;
+    margin-top: 10px; /* Adjust spacing between text and image */
+}
+
+.basic-info .title .location-details p {
+    margin: 0;
+    text-align: left;
+}
+
+.day-section {
+    margin: 10px 20px;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.day-header {
+    display: relative;
+    width: 100%;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    background-color: #97D8C4;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 0;
+}
+
+/*  Schedule  */
+.schedule {
+    margin: 20px 30px;
+    background-color: #ffffff;
+    overflow: auto;
+}
+
+.schedule p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.note {
+    padding-top: 10px;
+    font-size: .8em; 
+    text-align: center;
+}
