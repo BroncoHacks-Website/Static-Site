@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/FAQ.css';
+// import '../styles/FAQuestions.css'
+
 
 const FAQBoxes = ({ question, answer}) => {
   const [isActive, setIsActive] = useState(false);
@@ -14,13 +16,13 @@ const FAQBoxes = ({ question, answer}) => {
         <p>{question}</p>
         <div className={`arrow ${isActive ? 'down' : 'right'}`}></div>
       </div>
-      {isActive && (
+      {/* {isActive && ( */}
         <div className="answer-rectangle">
           
             <p>{answer}</p>
           
         </div>
-      )}
+      {/* )} */}
     </div>
   );
 };

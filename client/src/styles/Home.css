@@ -5,6 +5,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    min-height: 60vh;
 }
 
 .home-featured-row1 {

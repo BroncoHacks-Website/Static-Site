@@ -1,14 +1,13 @@
-
-import React from 'react';
-import '../styles/FAQ.css';
-import FAQBoxes from '../Components/FAQBoxes';
-import faqs from '../Assets/FAQ/FAQdata';
+import "../styles/FAQ.css";
+import FAQBoxes from "../Components/FAQBoxes";
+import faqs from "../Assets/FAQ/FAQdata";
 
 function FAQ() {
-    return (
+  return (
+    <>
       <div className="faq-container">
         <div className="faq-background">
-          <div className="title-container">
+          <div className="faq-title-container">
             <h1 className="faq-title">FAQ</h1>
           </div>
           <div className="faq-column">
@@ -22,7 +21,8 @@ function FAQ() {
           </div>
         </div>
       </div>
-    );
-  }
-  
-  export default FAQ;
+    </>
+  );
+}
+
+export default FAQ;

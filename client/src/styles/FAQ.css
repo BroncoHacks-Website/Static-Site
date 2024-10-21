@@ -3,16 +3,16 @@
 /* Base styles for FAQ items */
 .faq-item {
     width: 100%;
-    max-width: 900px;
+    max-width: 60rem;
     font-size: 1.2rem;
-    margin: 5px auto;
-    overflow: hidden; /* Ensure smooth transitions */
-    transition: max-height 1s , padding 1s ease; /* Smooth height transition */
-    max-height: 80px; /* Default height for collapsed item */
+    margin: 0.5rem auto;
+    overflow: hidden; 
+    transition: max-height 1s ease;
+    max-height: 3.5rem;
 }
 
 .faq-item.active {
-    max-height: 500px; /* Adjust this value as needed for expanded item */
+    max-height: 20rem;
 }
 
 /* Main container for the FAQ page */
@@ -21,13 +21,13 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+    min-height: 85vh; 
     background-image: url('/src/Assets/Design/racetrack-background.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    position: relative; /* Make position relative to maintain flow */
-    overflow-x: hidden; /* Hide horizontal overflow */
+    position: relative; 
+    overflow-x: hidden; 
     padding-top: 20px;
 }
 
@@ -35,27 +35,27 @@
 .faq-background {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    /* background-image: url('/src/Assets/Design/racetrack-background.png');
-    background-size: cover;
-    background-position: center; */
+    align-items: center; 
     width: 100%;
     height: 100%;
 }
 
 /* Title styling */
-.title-container {
+.faq-title-container {
     background-image: url('/cloud1.png');
-    height: 165px;
+    height: 10.25rem;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
     width: 100%;
-    overflow: hidden; /* Prevents content overflow */
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .faq-title {
@@ -63,8 +63,6 @@
     font-weight: bold;
     color: #000000;
     text-align: center;
-    margin-bottom: 60px;
-    margin-top: 60px;
     font-family: Verdana, sans-serif;
 }
 
@@ -84,7 +82,7 @@
 /* Styling for the question box */
 .question-rectangle {
     background-color: #97D8C4;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -93,8 +91,8 @@
     font-weight: bold;
     cursor: pointer;
     box-sizing: border-box;
-    transition: border-radius 0.3s ease;
     position: relative;
+    max-height: 3.5rem;
 }
 
 .question-rectangle p {
@@ -112,22 +110,21 @@
 /* Styling for the answer box */
 .answer-rectangle {
     background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20px 20px;
     padding: 15px;
     width: 100%;
     box-sizing: border-box;
-    transition: max-height 3s ease, padding 3s ease; /* Smooth height and padding transition */
-    max-height: 0; /* Initially hidden */
-    overflow: hidden; /* Ensure smooth transitions */
+    visibility: hidden; 
+    transition: visibility 0.75s ease; 
+    overflow: hidden; 
+    /* display: none; */
 }
 
 /* Active state for answer box */
 .faq-item.active .answer-rectangle {
-    max-height: 500px; /* Adjust as needed for expanded content */
     padding: 15px;
+    visibility: visible;
     border-radius: 0 0 20px 20px;
-    
 }
 
 .answer-rectangle p {
@@ -142,7 +139,7 @@
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid #50628C;
-    transition: transform 0.5s ease;
+    transition: transform 1s ease;
 }
 
 .arrow.down {

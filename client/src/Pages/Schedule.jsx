@@ -9,8 +9,8 @@ function Schedule() {
 
     <div className="schedule-page">
 
-      <div className='title-container'> 
-        <h1>
+      <div className='schedule-title-container'> 
+        <h1 className='schedule-title'>
           Schedule
         </h1>
       </div>

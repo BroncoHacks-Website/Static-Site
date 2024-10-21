@@ -15,6 +15,33 @@
     padding-top: 20px;
 }   
 
+.mtt-title-container {
+    background-image: url('/cloud1.png');
+    height: 15rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-2.5rem);
+}
+
+.mtt-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    margin-top: 4rem;
+}
+
 .team-container {
     display: flex;
     flex-direction: column;

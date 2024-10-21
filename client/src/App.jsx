@@ -24,9 +24,8 @@ function App() {
           <Route path="/Schedule" element={<Schedule/>}/>
           <Route path="/Error" element={<Error/>}/>
       </Routes>
-      <div className="foot">
-        <Footer/>
-      </div>
+      <Footer/>
+
     </Router>
   )
 }
