@@ -3,32 +3,56 @@
     padding: 0;
 }
 
-body{
-    /* --- Commented out background image for now bcuz we still deciding how it would look */
-    /* background-image: url('../src/Assets/Backgrounds/About-background.png'); */
-    /* background-color: lightblue;  */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* background-position: center; */
+.about-page-container {
+    padding: 2rem;
+    background-image: url('/src/Assets/Design/racetrack-background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.about-page-container {
-    background-color: #BCC9E7;
-    padding: 2rem;
+.about-title-container {
+    background-image: url('/cloud1.png');
+    height: 10.25rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+}
+
 
 .about-container{
     border-radius: 50px;
-    max-width: 90%;
-    padding: 50px 20px;
-    margin: 0 auto;
+    padding: 2rem;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5rem;
 }
 
 .container-items{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 20px;
+    padding: 2rem;
 }
 
 .container h1{
@@ -48,13 +72,15 @@ body{
     margin-right: 10px;
 }
 
+
 .container-items ul li img {
     border-radius: 50%;
     max-width: 100px;
     max-height: 100px;
 }
 
-.container-right{
+
+.container-hackathon-description {
     flex: 1;
     margin-left: 20px;
 }
@@ -63,4 +89,12 @@ body{
 }
 .container-items p{
     text-align: left;
+} 
+
+.line {
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    margin: 1rem 0;
+    border-radius: 5rem;
 }

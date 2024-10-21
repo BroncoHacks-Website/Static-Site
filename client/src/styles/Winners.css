@@ -1,5 +1,5 @@
 .winner-container {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 32px;
   }
   
@@ -59,15 +59,15 @@
   }
   
   .first {
-    color: gold; /* gold */
+    color: gold; 
   }
   
   .second {
-    color: silver; /* silver */
+    color: silver; 
   }
   
   .third {
-    color: brown; /* bronze */
+    color: brown;
   }
   
   .pic-placeholder {
