@@ -1,11 +1,21 @@
 /* Sponsors.css */
 
-.our-sponsors {
+.sponsors-container {
     display: flex;
-    justify-content: center; 
+    flex-direction: column;
     background-image: url('/src/Assets/Design/racetrack-background.png');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+}
+
+.our-sponsors {
+    display: flex;
+    justify-content: center; 
+    /* background-image: url('/src/Assets/Design/racetrack-background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; */
     height: 100vh;
 }
 
@@ -153,10 +163,10 @@
     left: 50%;
     transform: translateX(-50%);           
     height: auto;                                                                                                                                                                                                                                                                                                                       
-    width: 175px; /* Adjust the width of the company info box */
+    width: 200px; /* Adjust the width of the company info box */
     padding: 5px;
     font-size: 11px; /* Adjust the font size of the tooltip */
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     visibility: hidden; /* Hide initially */
@@ -170,10 +180,10 @@
     left: 50%;
     transform: translateX(-50%);             
     height: auto;                                                                                                                                                                                                                                                                                                                  
-    width: 175px; /* Adjust the width of the company info box */
+    width: 200px; /* Adjust the width of the company info box */
     padding: 5px;
     font-size: 11px; /* Adjust the font size of the tooltip */
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     visibility: hidden; /* Hide initially */
@@ -190,6 +200,58 @@
     width: max-content; /* Set the width to fit the content */
     padding: 10px; /* Add padding to create some space between the text and the edge of the box */
   }
+
+.company-title{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.sponsor-description {
+    margin-bottom: 15px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.contact-info::before {
+    content: "Contact: ";
+    font-weight: bold;
+}
+
+.website-info::before {
+    content: "Website: ";
+    font-weight: bold;
+}
+
+.sponsor-container{
+    display: flex;
+    padding: 20px 50px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+}
+
+.sponsor-button {
+    display: inline-block;
+    border-radius: 15px;
+    box-shadow: 0 7px #999;
+    padding: 5px 10px;
+    font-size: 35px;
+    font-family: 'Snacker', sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: #72DBBB;
+}
+
+.sponsor-button:hover {
+    background-color: #71BC78;
+}
+
+.sponsor-button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
 
 .logo-wrapper:hover .company-info {
     visibility: visible; /* Show on hover */

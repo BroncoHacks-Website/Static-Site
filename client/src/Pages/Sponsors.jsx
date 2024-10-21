@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import * as React from 'react';
 import '../styles/Sponsors.css';
 import checkeredFlag from "../Assets/Design/checkeredflag.png";
 import sponsorsData from "../Assets/Sponsors/sponsors.json";
+import sponsorPackage from "../Assets/Sponsors/sponsorship.pdf"
 
 // Import the image files
 import adobe from "../Assets/Sponsors/adobe.png";
@@ -16,7 +17,7 @@ import openai from "../Assets/Sponsors/openai.png";
 
 function Sponsors() {
 
-  const [hoveredLogo, setHoveredLogo] = useState(null);
+  const [hoveredLogo, setHoveredLogo] = React.useState(null);
 
   const handleLogoHover = (logo) => {
     setHoveredLogo(logo);
@@ -42,8 +43,13 @@ function Sponsors() {
     { id: 9, logo: openai, text: "OpenAI" },
   ];
 
+  const [isOpen, setOpen] = React.useState(false);
+  const handleClick = () => {
+    setOpen(!isOpen);
+  };
+
   return (
-    <>
+    <div className="sponsors-container">
       <div className="our-sponsors">
 
         <div className="cloud-banner">
@@ -64,13 +70,13 @@ function Sponsors() {
                 {hoveredLogo && hoveredLogo.id === logo.id && (
                   <div className="company-info">
                     <span>
-                      <h2>{logo.text}</h2>
+                      <h2 className="company-title">{logo.text}</h2>
                       {/* Check if sponsor is found before accessing its properties */}
                       {sponsor && (
                         <>
-                          <p>{sponsor.description}</p>
-                          <p>Contact: {sponsor.email}</p>
-                          <p>Website: <a href={sponsor.website} target="_blank" rel="noopener noreferrer">{sponsor.website}</a></p>
+                          <p className="sponsor-description">{sponsor.description}</p>
+                          <p className="contact-info">{sponsor.email}</p>
+                          <p className="website-info"><a href={sponsor.website} target="_blank" rel="noopener noreferrer">{sponsor.website}</a></p>
                         </>
                       )}
                     </span>
@@ -92,13 +98,13 @@ function Sponsors() {
                 {hoveredLogo && hoveredLogo.id === logo.id && (
                   <div className="company-info">
                     <span>
-                      <h2>{logo.text}</h2>
+                      <h2 className="company-title">{logo.text}</h2>
                       {/* Check if sponsor is found before accessing its properties */}
                       {sponsor && (
                         <>
-                          <p>{sponsor.description}</p>
-                          <p>Contact: {sponsor.email}</p>
-                          <p>Website: <a href={sponsor.website} target="_blank" rel="noopener noreferrer">{sponsor.website}</a></p>
+                          <p className="sponsor-description">{sponsor.description}</p>
+                          <p className="contact-info">{sponsor.email}</p>
+                          <p className="website-info"><a href={sponsor.website} target="_blank" rel="noopener noreferrer">{sponsor.website}</a></p>
                         </>
                       )}
                     </span>
@@ -119,13 +125,13 @@ function Sponsors() {
                 {hoveredLogo && hoveredLogo.id === logo.id && (
                   <div className="company-info">
                     <span>
-                      <h2>{logo.text}</h2>
+                      <h2 className="company-title">{logo.text}</h2>
                       {/* Check if sponsor is found before accessing its properties */}
                       {sponsor && (
                         <>
-                          <p>{sponsor.description}</p>
-                          <p>Contact: {sponsor.email}</p>
-                          <p>Website: <a href={sponsor.website} target="_blank" rel="noopener noreferrer">{sponsor.website}</a></p>
+                          <p className="sponsor-description">{sponsor.description}</p>
+                          <p className="contact-info">{sponsor.email}</p>
+                          <p className="website-info"><a href={sponsor.website} target="_blank" rel="noopener noreferrer">{sponsor.website}</a></p>
                         </>
                       )}
                     </span>
@@ -135,10 +141,31 @@ function Sponsors() {
             );
           })}
         </div>
-
       </div>
-    </>
+      <div className="sponsor-container">
+        <button
+            className="sponsor-button"
+            onClick={handleClick}
+        >
+          Sponsor Package
+        </button>
+        {
+            isOpen &&
+            <iframe
+                src={sponsorPackage}
+                width="80%"
+                height="740px"
+                style=
+                    {{
+                      margin: '15px auto 0',
+                      display: 'block'
+                    }}
+                title="Sponsor Package"
+            />
+        }
+      </div>
+    </div>
   );
 }
-  
+
 export default Sponsors;
