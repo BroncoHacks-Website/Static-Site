@@ -49,7 +49,7 @@ function Sponsors() {
   };
 
   return (
-    <>
+    <div className="sponsors-container">
       <div className="our-sponsors">
 
         <div className="cloud-banner">
@@ -164,7 +164,7 @@ function Sponsors() {
             />
         }
       </div>
-    </>
+    </div>
   );
 }
 

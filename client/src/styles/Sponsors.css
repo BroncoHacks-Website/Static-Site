@@ -1,11 +1,21 @@
 /* Sponsors.css */
 
-.our-sponsors {
+.sponsors-container {
     display: flex;
-    justify-content: center; 
+    flex-direction: column;
     background-image: url('/src/Assets/Design/racetrack-background.png');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+}
+
+.our-sponsors {
+    display: flex;
+    justify-content: center; 
+    /* background-image: url('/src/Assets/Design/racetrack-background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; */
     height: 100vh;
 }
 
@@ -219,7 +229,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #E6DBC6;
+    background-color: transparent;
 }
 
 .sponsor-button {
