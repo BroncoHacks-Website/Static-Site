@@ -7,6 +7,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    min-height: 72vh;
 }
 
 .our-sponsors {
@@ -16,7 +17,8 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed; */
-    height: 100vh;
+    /* height: 100vh; */
+    /* background-color: red; */
 }
 
 
@@ -120,7 +122,7 @@
 /* CSS for the first logo row */
 .logo-row:nth-child(2) {
     margin-top: 590px; /* Add spacing between rows */
-    margin-left: 400px;
+    /* margin-left: 400px; */
 }
 
 /* CSS for the second logo row */

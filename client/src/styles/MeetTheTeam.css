@@ -5,15 +5,42 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+    min-height: 80vh; 
     background-image: url('/src/Assets/Design/racetrack-background.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    position: relative; /* Make position relative to maintain flow */
-    overflow-x: hidden; /* Hide horizontal overflow */
-    padding-top: 20px;
+    /* position: relative; */
+    /* overflow-x: hidden;  */
+    padding-top: 1rem;
 }   
+
+.mtt-title-container {
+    background-image: url('/cloud1.png');
+    height: 15rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-2.5rem);
+}
+
+.mtt-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    margin-top: 4rem;
+}
 
 .team-container {
     display: flex;

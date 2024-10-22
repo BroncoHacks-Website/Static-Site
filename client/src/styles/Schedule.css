@@ -5,9 +5,36 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 100vh;
+    min-height: 80vh;
     background-image: url('/src/Assets/Design/racetrack-background.png');
     background-attachment: fixed;
     background-size: auto 100%;
     background-position: center;
+}
+
+.schedule-title-container {
+    background-image: url('/cloud1.png');
+    height: 12rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(1rem);
+    margin-bottom: 3rem;
+}
+
+.schedule-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    font-family: Verdana, sans-serif;
 }

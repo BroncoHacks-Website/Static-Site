@@ -90,13 +90,13 @@
   display: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .navbar-header h1 {
     display: none;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .navbar-links {
     display: none;
   }

@@ -1,10 +1,9 @@
-/* eslint-disable react/prop-types */
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 const slideStyles = {
   width: "100%",
   height: "100%",
-  borderRadius: "0.625rem",
+  borderRadius: "10px",
   backgroundSize: "cover",
   backgroundPosition: "center",
 };
@@ -13,8 +12,8 @@ const rightArrowStyles = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  right: "0.01rem",
-  fontSize: "3rem",
+  right: "32px",
+  fontSize: "45px",
   color: "#fff",
   zIndex: 1,
   cursor: "pointer",
@@ -24,8 +23,8 @@ const leftArrowStyles = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  left: "0.01rem",
-  fontSize: "3rem",
+  left: "32px",
+  fontSize: "45px",
   color: "#fff",
   zIndex: 1,
   cursor: "pointer",
@@ -36,58 +35,37 @@ const sliderStyles = {
   height: "100%",
 };
 
-const slidesContainerStyles = {
+const dotsContainerStyles = {
   display: "flex",
-  height: "100%",
-  transition: "transform ease-out 0.3s",
+  justifyContent: "center",
 };
 
-const slidesContainerOverflowStyles = {
-  overflow: "hidden",
-  height: "100%",
+const dotStyle = {
+  margin: "0 3px",
+  cursor: "pointer",
+  fontSize: "20px",
 };
 
-const Slideshow = ({ slides, parentWidth }) => {
-  const timerRef = useRef(null);
+const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  //prev slide
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
-
-  //next slide
-  const goToNext = useCallback(() => {
+  const goToNext = () => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
-  }, [currentIndex, slides]);
-
-  const getSlideStylesWithBackground = (slideIndex) => ({
+  };
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+  const slideStylesWidthBackground = {
     ...slideStyles,
-    backgroundImage: `url(${slides[slideIndex].url})`,
-    width: `${parentWidth}px`,
-  });
-
-  const getSlidesContainerStylesWithWidth = () => ({
-    ...slidesContainerStyles,
-    width: parentWidth * slides.length,
-    transform: `translateX(${-(currentIndex * parentWidth)}px)`,
-  });
-
-  //timer component
-  useEffect(() => {
-    if (timerRef.current) {
-      clearTimeout(timerRef.current);
-    }
-    timerRef.current = setTimeout(() => {
-      goToNext();
-    }, 5000); //Changes the current photo after x amount of ms
-
-    return () => clearTimeout(timerRef.current);
-  }, [goToNext]);
+    backgroundImage: `url(${slides[currentIndex].url})`,
+    // backgroundImage: `url(${slides[currentIndex]})`,
+  };
 
   return (
     <div style={sliderStyles}>
@@ -99,18 +77,20 @@ const Slideshow = ({ slides, parentWidth }) => {
           ❱
         </div>
       </div>
-      <div style={slidesContainerOverflowStyles}>
-        <div style={getSlidesContainerStylesWithWidth()}>
-          {slides.map((_, slideIndex) => (
-            <div
-              key={slideIndex}
-              style={getSlideStylesWithBackground(slideIndex)}
-            ></div>
-          ))}
-        </div>
+      <div style={slideStylesWidthBackground}></div>
+      <div style={dotsContainerStyles}>
+        {slides.map((slide, slideIndex) => (
+          <div
+            style={dotStyle}
+            key={slideIndex}
+            onClick={() => goToSlide(slideIndex)}
+          >
+            ●
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default Slideshow;
+export default ImageSlider;

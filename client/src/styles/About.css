@@ -1,34 +1,52 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
 }
 
-body{
-    /* --- Commented out background image for now bcuz we still deciding how it would look */
-    /* background-image: url('../src/Assets/Backgrounds/About-background.png'); */
-    /* background-color: lightblue;  */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* background-position: center; */
+
+
+.about-title-container {
+    background-image: url('/cloud1.png');
+    height: 10.25rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.about-page-container {
-    background-color: #BCC9E7;
-    padding: 2rem;
+.about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    font-family: Verdana, sans-serif;
 }
+
 
 .about-container{
     border-radius: 50px;
-    max-width: 90%;
-    padding: 50px 20px;
-    margin: 0 auto;
+    padding: 2rem;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5rem;
 }
 
 .container-items{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 20px;
+    padding: 2rem;
 }
 
 .container h1{
@@ -48,13 +66,15 @@ body{
     margin-right: 10px;
 }
 
+
 .container-items ul li img {
     border-radius: 50%;
     max-width: 100px;
     max-height: 100px;
 }
 
-.container-right{
+
+.container-hackathon-description {
     flex: 1;
     margin-left: 20px;
 }
@@ -63,4 +83,103 @@ body{
 }
 .container-items p{
     text-align: left;
+}  */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.about-page-container {
+  background-image: url("/src/Assets/Design/racetrack-background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container {
+  padding: 3rem 5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(246, 246, 246);
+  border-radius: 25px;
+  margin: 5rem 10%;
+  max-width: 100rem;
+}
+
+.about-container-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+}
+
+.about-container h1 {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0 2rem;
+  text-decoration: underline;
+}
+
+.about-container-clubs {
+  background-color: #a2c0a3;
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 1rem 1.5rem;
+}
+.about-container-clubs ul li {
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.about-container-items ul li img {
+  border-radius: 50%;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.about-container-right {
+  flex: 1;
+  margin-left: 5rem;
+  /* max-width: 50%; */
+}
+.about-container-items h2 {
+  text-align: center;
+  text-decoration: underline;
+  margin: 1rem 0;
+}
+.about-container-items p {
+  text-align: left;
+}
+
+.line {
+  width: 100%;
+  height: 5px;
+  background-color: #000000;
+  margin: 1rem 0;
+  border-radius: 5rem;
+}
+
+@media (max-width: 1200px) {
+  .about-container {
+    margin: 5%;
+  }
+  .about-container-items {
+    flex-direction: column;
+  }
+  .about-container-right {
+    margin-left: 0;
+  }
+  .about-container-clubs {
+    transform: translateY(0);
+  }
 }
