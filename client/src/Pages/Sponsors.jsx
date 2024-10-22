@@ -5,15 +5,16 @@ import sponsorsData from "../Assets/Sponsors/sponsors.json";
 import sponsorPackage from "../Assets/Sponsors/sponsorship.pdf"
 
 // Import the image files
-import adobe from "../Assets/Sponsors/adobe.png";
-import att from "../Assets/Sponsors/att.png";
+// import adobe from "../Assets/Sponsors/adobe.png";
+// import att from "../Assets/Sponsors/att.png";
 import avanade from "../Assets/Sponsors/avanade.png";
-import grubhub from "../Assets/Sponsors/grubhub.png";
-import google from "../Assets/Sponsors/google.png";
-import npm from "../Assets/Sponsors/npm.png";
-import react from "../Assets/Sponsors/react.png";
-import tesla from "../Assets/Sponsors/tesla.png";
-import openai from "../Assets/Sponsors/openai.png";
+import mlh from "../Assets/Sponsors/mlh.png";
+// import grubhub from "../Assets/Sponsors/grubhub.png";
+// import google from "../Assets/Sponsors/google.png";
+// import npm from "../Assets/Sponsors/npm.png";
+// import react from "../Assets/Sponsors/react.png";
+// import tesla from "../Assets/Sponsors/tesla.png";
+// import openai from "../Assets/Sponsors/openai.png";
 
 function Sponsors() {
 
@@ -27,21 +28,23 @@ function Sponsors() {
     setHoveredLogo(null);
   };
 
-  const sponsorLogos = [
-    { id: 1, logo: react, text: "React" },
-    { id: 2, logo: tesla, text: "Tesla" },
-    { id: 3, logo: adobe, text: "Adobe" },
-  ];
-  const sponsorLogos2 = [
-    { id: 4, logo: avanade, text: "Avanade" },
-    { id: 5, logo: google, text: "Google" },
-    { id: 6, logo: npm, text: "npm" },
-  ];
-  const sponsorLogos3 = [
-    { id: 7, logo: att, text: "AT&T" },
-    { id: 8, logo: grubhub, text: "Grubhub" },
-    { id: 9, logo: openai, text: "OpenAI" },
-  ];
+  // const sponsorLogos = [
+  //   { id: 1, logo: react, text: "React" },
+  //   { id: 2, logo: tesla, text: "Tesla" },
+  //   { id: 3, logo: adobe, text: "Adobe" },
+  // ];
+  // const sponsorLogos2 = [
+  //   { id: 4, logo: avanade, text: "Avanade" },
+  //   { id: 5, logo: google, text: "Google" },
+  //   { id: 6, logo: npm, text: "npm" },
+  // ];
+  // const sponsorLogos3 = [
+  //   { id: 7, logo: att, text: "AT&T" },
+  //   { id: 8, logo: grubhub, text: "Grubhub" },
+  //   { id: 9, logo: openai, text: "OpenAI" },
+  // ];
+
+  const sponsorLogos = [{id: 1, logo: avanade, text: "Avanade"}, {id: 2, logo: mlh, text: "MLH"}]
 
   const [isOpen, setOpen] = React.useState(false);
   const handleClick = () => {
@@ -88,9 +91,8 @@ function Sponsors() {
         </div>
 
 
-        <div className="logo-row">
+        {/* <div className="logo-row">
           {sponsorLogos2.map((logo) => {
-            // Find the sponsor object in sponsorsData with the matching name
             const sponsor = sponsorsData.find((sponsor) => sponsor.name === logo.text);
             return (
               <div key={logo.id} className="logo-wrapper" onMouseEnter={() => handleLogoHover(logo)} onMouseLeave={handleLogoLeave}>
@@ -99,7 +101,6 @@ function Sponsors() {
                   <div className="company-info">
                     <span>
                       <h2 className="company-title">{logo.text}</h2>
-                      {/* Check if sponsor is found before accessing its properties */}
                       {sponsor && (
                         <>
                           <p className="sponsor-description">{sponsor.description}</p>
@@ -117,7 +118,6 @@ function Sponsors() {
 
         <div className="logo-row">
           {sponsorLogos3.map((logo) => {
-            // Find the sponsor object in sponsorsData with the matching name
             const sponsor = sponsorsData.find((sponsor) => sponsor.name === logo.text);
             return (
               <div key={logo.id} className="logo-wrapper" onMouseEnter={() => handleLogoHover(logo)} onMouseLeave={handleLogoLeave}>
@@ -126,7 +126,6 @@ function Sponsors() {
                   <div className="company-info">
                     <span>
                       <h2 className="company-title">{logo.text}</h2>
-                      {/* Check if sponsor is found before accessing its properties */}
                       {sponsor && (
                         <>
                           <p className="sponsor-description">{sponsor.description}</p>
@@ -140,7 +139,7 @@ function Sponsors() {
               </div>
             );
           })}
-        </div>
+        </div> */}
       </div>
       <div className="sponsor-container">
         <button
