@@ -1,15 +1,23 @@
 /* ---- Main Content ---- */
 .home-featured-container {
-    padding: 5em 0;
+    padding: 5rem 0;
     background-image: url('/src/Assets/Design/racetrack-background.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.home-featured-row1 {
-    padding-bottom: 3em;
+.home-featured-row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    padding-bottom: 3rem;
 }
 
 /* ---- Slideshow ---- */
@@ -25,18 +33,6 @@
     border-radius: 0.625rem;
     outline-width: 0.35rem;
 }
-
-/* .containerStyles {
-    width: 31.25rem;
-    height: 17.5rem;
-    margin: 0 auto;
-}
-
-.slide-wrapper {
-    outline: 0.313rem solid #97D8C4;
-    border-radius: 0.625rem;
-    outline-width: 0.35rem;
-} */
 
 .home-map {
     padding-top: 25px;
@@ -59,5 +55,17 @@
         column-gap: 3em;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .home-featured-row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-featured-row {
+        flex-direction: column;
     }
 }
