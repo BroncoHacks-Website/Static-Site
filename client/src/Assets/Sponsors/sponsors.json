@@ -1,4 +1,10 @@
 [
+  {
+    "name": "MLH",
+    "description": "Major League Hacking is the official student hackathon league.",
+    "email": "contact@mlh.io",
+    "website": "https://mlh.io"
+  },
   { 
     "name": "React",
     "description": "A JavaScript library for building user interfaces.",
