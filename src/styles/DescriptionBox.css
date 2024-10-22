@@ -33,6 +33,7 @@
     height: 7em;
     width: 9em;
 }
+
 .db-mascot {
     position: absolute;
     height: 8em;
@@ -46,5 +47,29 @@
     /* For Home Page*/    
     .db-container {
         margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .db-container {
+        width: 20rem;
+        height: 23rem;
+        padding: 1rem;
+        /* margin: 0.5rem; */
+    }
+    .db-title h1 {
+        font-size: 2.5em;
+    }
+    .db-title h2 {
+        font-size: 1.5em;
+    }
+    .db-content-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .db-filler {
+        height: 1rem;
+    }
+    .db-mascot {
+        transform: translateX(6rem)
     }
 }

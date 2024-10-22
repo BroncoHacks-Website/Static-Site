@@ -32,14 +32,12 @@ function Home() {
   return (
     <>
       <div className="home-featured-container">
-        <div className="home-featured-row1">
-          <DescriptionBox />
-          <div className="slide-wrapper">
-            <div className="slides">
-              <div className="containerStyles">
-                <Slideshow slides={slidesData} />
-              </div>
-            </div>
+        <div className="home-featured-row">
+          <div className="description-box">
+            <DescriptionBox />
+          </div>
+          <div className="containerStyles">
+            <Slideshow slides={slidesData} />
           </div>
         </div>
         <Countdown deadline="October, 31, 2024" />
