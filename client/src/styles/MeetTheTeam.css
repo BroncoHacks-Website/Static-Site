@@ -5,14 +5,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+    min-height: 80vh; 
     background-image: url('/src/Assets/Design/racetrack-background.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    position: relative; /* Make position relative to maintain flow */
-    overflow-x: hidden; /* Hide horizontal overflow */
-    padding-top: 20px;
+    /* position: relative; */
+    /* overflow-x: hidden;  */
+    padding-top: 1rem;
 }   
 
 .mtt-title-container {
