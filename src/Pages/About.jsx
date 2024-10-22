@@ -1,5 +1,6 @@
 import "/src/styles/About.css";
 import Winners from "../Components/WinnerCard";
+import Script from "../Assets/Profile/icon/script.png";
 
 function About() {
   return (
@@ -72,7 +73,7 @@ function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="../src/Assets/Profile/icon/script.png" />
+                  <img src={Script} />
                 </a>
               </li>
             </ul>

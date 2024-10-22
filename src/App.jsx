@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom' 
+import { BrowserRouter, Routes, Route} from 'react-router-dom' 
 import './App.css'
 import NavBar from './Components/NavBar.jsx'
 import Home from './Pages/Home.jsx'
@@ -13,7 +13,7 @@ import "./styles/Profile.css"; /* temporary just so it visually looks fine */
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <NavBar className="navbar" />
       <Routes>
           <Route path="/" element={<Home/>}/>
@@ -26,7 +26,7 @@ function App() {
       </Routes>
       <Footer/>
 
-    </Router>
+    </BrowserRouter>
   )
 }
 export default App;
