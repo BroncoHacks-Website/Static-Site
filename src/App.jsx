@@ -1,11 +1,11 @@
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom' 
-import '../src/App.css'
-import NavBar from './Components/NavBar'
+import { BrowserRouter, Routes, Route} from 'react-router-dom' 
+import './App.css'
+import NavBar from './Components/NavBar.jsx'
 import Home from './Pages/Home.jsx'
-import FAQ from './Pages/FAQ'
-import MeetTheTeam from './Pages/MeetTheTeam'
+import FAQ from './Pages/FAQ.jsx'
+import MeetTheTeam from './Pages/MeetTheTeam.jsx'
 import Schedule from './Pages/Schedule.jsx'
-import Sponsors from './Pages/Sponsors'
+import Sponsors from './Pages/Sponsors.jsx'
 import AboutUs from './Pages/About.jsx'
 import Footer from './Components/Footer.jsx'
 import Error from './Pages/Error.jsx'
@@ -13,7 +13,7 @@ import "./styles/Profile.css"; /* temporary just so it visually looks fine */
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter basename='/Static-Site/'>
       <NavBar className="navbar" />
       <Routes>
           <Route path="/" element={<Home/>}/>
@@ -26,7 +26,7 @@ function App() {
       </Routes>
       <Footer/>
 
-    </Router>
+    </BrowserRouter>
   )
 }
 export default App;

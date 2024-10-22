@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import "../styles/Profile.css"; /* temporary just so it visually looks fine */
+import linkedin from "../Assets/Profile/icon/linkedin-small.png";
 
 function Profile(props) {
 const person = props.person;
@@ -24,7 +25,7 @@ const person = props.person;
       <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
         <img
           className="linkedin-picture"
-          src="/src/Assets/Profile/icon/linkedin-small.png"
+          src={linkedin}
           alt="LinkedIn"
         />
       </a>
