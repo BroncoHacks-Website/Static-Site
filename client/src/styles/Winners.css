@@ -1,125 +1,160 @@
 .winner-container {
-    /* min-height: 100vh; */
-    padding: 32px;
-  }
-  
-  .main-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 32px;
-  }
-  
-  .category-title {
-    font-size: 2rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 16px;
-  }
-  
-  .navigation-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .nav-button {
-    font-size: 2rem;
-    padding: 8px 16px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
+  /* min-height: 100vh; */
+  padding: 32px;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.category-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.navigation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-container-mobile {
+  display: none;
+}
+
+.nav-button {
+  font-size: 2rem;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  height: 32rem;
+  margin: auto;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: "Arial, sans-serif";
+}
+
+.card-content {
+  padding: 16px;
+  text-align: center;
+}
+
+.place {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.first {
+  color: gold;
+}
+
+.second {
+  color: silver;
+}
+
+.third {
+  color: brown;
+}
+
+.pic-placeholder {
+  width: 100%;
+  height: 150px;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.pic-placeholder img {
+  flex-shrink: 0;
+  min-width: auto;
+  min-height: 100%;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.description {
+  color: #555;
+}
+
+.team {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.members {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.linkedin-icon {
+  background-color: #0077b5;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin-left: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media (max-width: 1200px) {
   .card-container {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-  }
-  
-  .card {
-    width: 100%;
-    max-width: 300px;
-    margin: auto;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    font-family: 'Arial, sans-serif';
-  }
-  
-  .card-content {
-    padding: 16px;
-    text-align: center;
-  }
-  
-  .place {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .first {
-    color: gold; 
-  }
-  
-  .second {
-    color: silver; 
-  }
-  
-  .third {
-    color: brown;
-  }
-  
-  .pic-placeholder {
-    width: 100%;
-    height: 150px;
-    background-color: #e0e0e0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 16px 0;
+    flex-direction: column;
   }
 
-  .pic-placeholder img {
-    flex-shrink: 0;
-    min-width: auto;
-    min-height: 100%
-}
-  
-  .title {
-    font-size: 20px;
-    font-weight: 600;
+  .navigation-container {
+    display: none;
   }
-  
-  .description {
-    color: #555;
-  }
-  
-  .team {
-    margin-top: 8px;
-    font-size: 18px;
-    font-weight: 500;
-  }
-  
-  .members {
-    list-style: none;
-    padding: 0;
-    margin: 8px 0 0 0;
-  }
-  
-  .member {
+
+  .navigation-container-mobile {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+  }
+
+  .winner-buttons-mobile {
+    display: flex;
     justify-content: center;
-    margin-top: 4px;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 0 1rem;
   }
-  
-  .linkedin-icon {
-    background-color: #0077b5;
-    color: white;
-    border-radius: 4px;
-    padding: 2px 4px;
-    margin-left: 8px;
-    text-decoration: none;
-    font-size: 14px;
+
+  .card {
+    /* display: flex; */
+    /* flex-direction: row; */
+    max-width: 100%;
+    height: auto;
   }
+}
