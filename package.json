@@ -2,7 +2,7 @@
   "name": "static-site",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://BroncoHacks-Website/github.io//Static-Site",
+  "homepage": "https://BroncoHacks-Website.github.io/Static-Site",
   "type": "module",
   "scripts": {
     "dev": "vite",
