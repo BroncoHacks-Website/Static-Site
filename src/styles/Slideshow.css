@@ -1,0 +1,71 @@
+.slideshowContainer {
+    /* background-color: re d; */
+    width: 31.25rem;
+    height: 17.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.slideshow {
+    width: 100%;
+    height: 100%;
+    /* background-size: cover;
+    background-position: center; */
+    /* margin: 0 auto; */
+    border: 0.313rem solid #97D8C4;
+    border-radius: 0.625rem;
+    outline-width: 0.35rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.imageStyles {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.arrows {
+    transform: translateY(6.5rem);
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    /* background-color: purple; */
+    width: 31.25rem;
+}
+
+.rightArrowStyles {
+    position: absolute;
+    /* top: 50%; */
+    /* transform: translate(0, -50%); */
+    right: 1.25rem;
+    font-size: 45px;
+    color: #fff;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.leftArrowStyles {
+    position: absolute;
+    /* top: 50%; */
+    /* transform: translate(0, -50%); */
+    left: 1.25rem;
+    font-size: 45px;
+    color: #fff;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.dotsContainerStyles {
+    display: flex;
+    justify-content: center;
+}
+
+.dotStyle {
+    margin: 0 3px;
+    cursor: pointer;
+    font-size: 20px;
+
+}

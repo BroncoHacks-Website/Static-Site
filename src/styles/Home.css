@@ -25,14 +25,14 @@
     position: left;
 }
 
-.containerStyles {
+/* .containerStyles {
     width: 31.25rem;
     height: 17.5rem;
     margin: 0 auto;
     outline: 0.313rem solid #97D8C4;
     border-radius: 0.625rem;
     outline-width: 0.35rem;
-}
+} */
 
 .home-map {
     padding-top: 25px;
@@ -59,12 +59,6 @@
 }
 
 @media (max-width: 1200px) {
-    .home-featured-row {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 768px) {
     .home-featured-row {
         flex-direction: column;
     }

@@ -33,7 +33,9 @@ function Home() {
     <>
       <div className="home-featured-container">
         <div className="home-featured-row">
-          <DescriptionBox />
+          <div className="description-box">
+            <DescriptionBox />
+          </div>
           <div className="containerStyles">
             <Slideshow slides={slidesData} />
           </div>

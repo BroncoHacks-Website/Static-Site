@@ -50,7 +50,7 @@ function Countdown(props) {
         <div className="cd-time-wrapper">
           <h1 className="cd-days">{createLeadingZero(days)}</h1><span className="cd-semicolon">:</span>
           <h1>{createLeadingZero(hours)}</h1><span className="cd-semicolon">:</span>
-          <h1>{createLeadingZero(minutes)}</h1><span className="cd-semicolon">:</span>
+          <h1>{createLeadingZero(minutes)}</h1><span className="cd-semicolon-seconds">:</span>
           <h1 className="cd-seconds">{createLeadingZero(seconds)}</h1>
         </div>
         <div className="cd-txt-wrapper">
