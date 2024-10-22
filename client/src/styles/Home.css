@@ -1,10 +1,10 @@
 /* ---- Main Content ---- */
 .home-featured-container {
-    padding: 5em 0 5em 0;
+    padding: 5em 0;
     background-image: url('/src/Assets/Design/racetrack-background.png');
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position:center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .home-featured-row1 {
